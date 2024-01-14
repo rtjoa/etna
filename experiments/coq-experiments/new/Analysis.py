@@ -15,7 +15,7 @@ def analyze(results: str, images: str):
         times = partial(stacked_barchart_times, case=workload, df=df)
         times(
             strategies=[
-                'BespokeGenerator', 'NewGenerator'
+                'BespokeGenerator', 'EntropyApproxGenerator'
             ],
             colors=['#243763', '#000000'],
             limits=[0.1, 1, 10, 60],
