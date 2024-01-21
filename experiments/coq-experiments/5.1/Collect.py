@@ -25,7 +25,12 @@ def collect(results: str):
             run_trial = None
 
             for strategy in tool.all_strategies(workload):
-                if strategy.name not in ['BespokeGenerator', 'EntropyApproxGenerator']:
+                if strategy.name not in [
+                    'BespokeGenerator',
+                    'EntropyApproxGenerator',
+                    'EntropyApproxAndUniformAppsGenerator',
+                    'UniformAppsGenerator'
+                ]:
                     continue
 
                 for property in tool.all_properties(workload):

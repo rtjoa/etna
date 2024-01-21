@@ -93,13 +93,18 @@ def stacked_barchart_times(
         xaxis=go.layout.XAxis(showticklabels=False,),
         yaxis=go.layout.YAxis(
             title='',
-            showticklabels=False,
+            showticklabels=True,
         ),
-        font_size=60,
+        font_size=40,
         font={'family': 'Helvetica'},
-        width=1920,
-        height=1080,
+        width=6000,
+        height=500,
         showlegend=False,
+    )
+    fig.update_layout(
+        yaxis={
+            "tickfont": {"size": 40},
+        }
     )
 
     # hide y axis title
@@ -109,12 +114,13 @@ def stacked_barchart_times(
     strategies = sorted(strategies,
                         key=lambda x: strategy_sorter[x] if x in strategy_sorter.keys() else -1)
 
+    no_gen = lambda s: ''.join(s.split('Generator'))
     for strategy, color in zip(strategies[::-1], extrapolated_colors):
         fig.add_trace(
             go.Bar(
                 x=results[results['strategy'] == strategy]['value'],
-                y=results[results['strategy'] == strategy]['strategy'],
-                name=strategy,
+                y=list(map(no_gen, results[results['strategy'] == strategy]['strategy'])),
+                name=''.join(strategy.split('G')),
                 marker_color=color,
                 text=results[results['strategy'] == strategy]['value'],
                 orientation='h',
