@@ -30,6 +30,7 @@ def collect(results: str):
                     'EntropyApproxGenerator',
                     'EntropyApproxAndUniformAppsGenerator',
                     'UniformAppsGenerator'
+                    '4321AppsGenerator'
                 ]:
                     continue
 
