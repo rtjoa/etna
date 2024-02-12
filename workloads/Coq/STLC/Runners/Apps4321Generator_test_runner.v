@@ -1,4 +1,4 @@
-From STLC Require Import 4321AppsGenerator.
+From STLC Require Import Apps4321Generator.
 From QuickChick Require Import QuickChick.
 Set Warnings "-extraction-opaque-accessed,-extraction".
 Axiom num_tests : nat. Extract Constant num_tests => "max_int".
@@ -22,4 +22,4 @@ let () =
   Sys.argv.(1) |> qctest_map
 ".
 
-Extraction "4321AppsGenerator_test_runner.ml" qctest_test_prop_SinglePreserve qctest_test_prop_MultiPreserve qctest_map.
+Extraction "Apps4321Generator_test_runner.ml" qctest_test_prop_SinglePreserve qctest_test_prop_MultiPreserve qctest_map.
