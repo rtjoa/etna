@@ -19,6 +19,7 @@ def analyze(results: str, images: str):
         ('EntropyApproxGenerator', '#500'),
         ('Apps4321Generator', '#050'),
         ('W95_996_301_18_834_309_92Generator', '#330'),
+        ('TypeBasedGenerator', '#033'),
     ])
     colors = list(reversed(colors))
     for workload in ['STLC']:
