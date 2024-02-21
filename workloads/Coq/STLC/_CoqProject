@@ -9,6 +9,7 @@ Strategies/EntropyApproxAndUniformAppsGenerator.v
 Strategies/UniformAppsGenerator.v
 Strategies/Apps4321Generator.v
 Strategies/TypeBasedFuzzer.v
+Strategies/W95_996_301_18_834_309_92Generator.v
 Runners/EntropyApproxGenerator_test_runner.v
 Runners/BespokeGenerator_test_runner.v
 Runners/Apps4321Generator_test_runner.v

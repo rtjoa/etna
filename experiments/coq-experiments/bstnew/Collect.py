@@ -10,7 +10,7 @@ def collect(results: str):
     tool = Coq(results=results, replace_level=ReplaceLevel.SKIP)
 
     for workload in tool.all_workloads():
-        if workload.name not in ['STLC']:
+        if workload.name not in ['BST']:
             continue
 
         tool._preprocess(workload)
@@ -27,11 +27,11 @@ def collect(results: str):
             for strategy in tool.all_strategies(workload):
                 if strategy.name not in [
                     'BespokeGenerator',
-                    'EntropyApproxGenerator',
-                    'EntropyApproxAndUniformAppsGenerator',
-                    'UniformAppsGenerator',
-                    'Apps4321Generator',
-                    'W95_996_301_18_834_309_92Generator',
+                    'New57_60_59_74_67Generator',
+                    # 'EntropyApproxGenerator',
+                    # 'EntropyApproxAndUniformAppsGenerator',
+                    # 'UniformAppsGenerator',
+                    # 'Apps4321Generator',
                 ]:
                     continue
 

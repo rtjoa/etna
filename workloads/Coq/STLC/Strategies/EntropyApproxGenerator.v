@@ -76,7 +76,7 @@ Fixpoint genTyp (s: nat) : G Typ :=
   match s with
   | 0 => ret TBool
   | S s' =>
-    let '(boolWeight, funWeight) :=
+let '(boolWeight, funWeight) :=
       get
       [
         (1, (552, 1000-552));
@@ -93,13 +93,14 @@ Fixpoint genTyp (s: nat) : G Typ :=
           ret (TFun t1 t2))
     ]
   end.
-  
+
 Fixpoint genExpr env tau (sz: nat) : G (option Expr) :=
   match sz with
   | 0 =>
+    let '(var_weight, zero_weight) := (607, 1000-607) in
       backtrack
-        [(1, oneOf_ (ret None) (map (fun x => returnGen (Some (Var x))) (genVar' env tau 0 [])))
-        ;(1, genZero env tau)] 
+        [(var_weight, oneOf_ (ret None) (map (fun x => returnGen (Some (Var x))) (genVar' env tau 0 [])))
+        ;(zero_weight, genZero env tau)] 
   | S sz' =>
       let '(val_weight, app_weight, var_weight) :=
         get
@@ -108,7 +109,7 @@ Fixpoint genExpr env tau (sz: nat) : G (option Expr) :=
             (2, (422, 292, 692));
             (3, (435, 300, 682));
             (4, (462, 301, 667));
-            (5, (630, 330, 500))
+            (5, (630, 328, 500))
           ]
           sz
           (0, 0 ,0) in

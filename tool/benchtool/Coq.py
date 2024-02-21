@@ -399,10 +399,19 @@ let () =
             coq_project_file_contents = coq_project_file_reader.read().splitlines()
 
         with open(f"{workload.path}/_CoqProject", "w") as coq_project_file_writer:
+            print("==========")
+            print(coq_project_file_contents)
+
+            l = ""
             for coq_project_file_line in coq_project_file_contents:
                 if not coq_project_file_line.startswith(
                         RUNNERS_DIR) and coq_project_file_line != "":
-                    coq_project_file_writer.write(coq_project_file_line + "\n")
+                    s = coq_project_file_line + "\n"
+                    coq_project_file_writer.write(s)
+                    l += s
 
             for strategy in generators + fuzzers:
-                coq_project_file_writer.write(f"{RUNNERS_DIR}/{strategy}_test_runner.v\n")
+                s = f"{RUNNERS_DIR}/{strategy}_test_runner.v\n"
+                l += s
+                coq_project_file_writer.write(s)
+            print(l)
