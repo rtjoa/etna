@@ -33,6 +33,7 @@ def collect(results: str):
                     'Apps4321Generator',
                     'W95_996_301_18_834_309_92Generator',
                     'TypeBasedGenerator',
+                    'ManualTypeBasedGenerator',
                 ]:
                     continue
 

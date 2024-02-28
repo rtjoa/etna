@@ -28,6 +28,8 @@ def collect(results: str):
                 if strategy.name not in [
                     'BespokeGenerator',
                     'New57_60_59_74_67Generator',
+                    'TypeBasedGenerator',
+                    'ManualTypeBasedGenerator',
                     # 'EntropyApproxGenerator',
                     # 'EntropyApproxAndUniformAppsGenerator',
                     # 'UniformAppsGenerator',

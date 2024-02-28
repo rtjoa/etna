@@ -3,6 +3,7 @@ Src/Impl.v
 Src/Spec.v
 Strategies/BespokeGenerator.v
 Strategies/TypeBasedGenerator.v
+Strategies/ManualTypeBasedGenerator.v
 Strategies/SpecificationBasedGenerator.v
 Strategies/EntropyApproxGenerator.v
 Strategies/EntropyApproxAndUniformAppsGenerator.v
@@ -15,6 +16,7 @@ Runners/BespokeGenerator_test_runner.v
 Runners/W95_996_301_18_834_309_92Generator_test_runner.v
 Runners/Apps4321Generator_test_runner.v
 Runners/EntropyApproxAndUniformAppsGenerator_test_runner.v
+Runners/ManualTypeBasedGenerator_test_runner.v
 Runners/UniformAppsGenerator_test_runner.v
 Runners/SpecificationBasedGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v

@@ -4,10 +4,12 @@ Src/Spec.v
 Strategies/BespokeGenerator.v
 Strategies/New57_60_59_74_67Generator.v
 Strategies/TypeBasedGenerator.v
+Strategies/ManualTypeBasedGenerator.v
 Strategies/SpecificationBasedGenerator.v
 Strategies/TypeBasedFuzzer.v
 Runners/BespokeGenerator_test_runner.v
 Runners/New57_60_59_74_67Generator_test_runner.v
+Runners/ManualTypeBasedGenerator_test_runner.v
 Runners/SpecificationBasedGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v
 Runners/TypeBasedFuzzer_test_runner.v
