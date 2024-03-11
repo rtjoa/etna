@@ -68,6 +68,15 @@ collectbstnew:
 analyzebstnew:
 	python3 experiments/coq-experiments/bstnew/Analysis.py --data=$(DATA)/bstnew --figures=$(FIGURES)
 
+collectrbtnew:
+	python3 qc-checker.py use_new_qc
+	python3 bounds-switch.py to_max
+	mkdir -p $(DATA)/bstnew
+	python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew
+
+analyzerbtnew:
+	python3 experiments/coq-experiments/rbtnew/Analysis.py --data=$(DATA)/rbtnew --figures=$(FIGURES)
+
 switchold:
 	git -C ../QuickChick switch etna-experiment-5.2
 	make -C ../QuickChick clean

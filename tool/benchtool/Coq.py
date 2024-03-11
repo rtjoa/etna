@@ -398,6 +398,7 @@ let () =
         with open(f"{workload.path}/_CoqProject", "r") as coq_project_file_reader:
             coq_project_file_contents = coq_project_file_reader.read().splitlines()
 
+        print(generators)
         with open(f"{workload.path}/_CoqProject", "w") as coq_project_file_writer:
             print("==========")
             print(coq_project_file_contents)

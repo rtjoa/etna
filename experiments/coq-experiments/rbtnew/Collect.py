@@ -10,7 +10,7 @@ def collect(results: str):
     tool = Coq(results=results, replace_level=ReplaceLevel.SKIP)
 
     for workload in tool.all_workloads():
-        if workload.name not in ['BST']:
+        if workload.name not in ['RBT']:
             continue
 
         tool._preprocess(workload)
@@ -24,18 +24,26 @@ def collect(results: str):
 
             run_trial = None
 
-            for strategy in tool.all_strategies(workload):
-                if strategy.name not in [
+
+            target_strategies = [
                     'BespokeGenerator',
-                    'New57_60_59_74_67Generator',
                     'TypeBasedGenerator',
                     'ManualTypeBasedGenerator',
-                    'Tuned1TypeBasedGenerator',
-                    # 'EntropyApproxGenerator',
-                    # 'EntropyApproxAndUniformAppsGenerator',
-                    # 'UniformAppsGenerator',
-                    # 'Apps4321Generator',
-                ]:
+                    'ColorPropTBGenerator',
+                    'HandTunedTBGenerator',
+                    'SamplingEntropyTBGenerator',
+                    'RookieGenerator',
+                ]
+            for s in target_strategies:
+                if not any(
+                    strategy.name == s
+                    for strategy in tool.all_strategies(workload)
+                ):
+                    print(f"Missing strategy {s}")
+                    exit(1)
+
+            for strategy in tool.all_strategies(workload):
+                if strategy.name not in target_strategies:
                     continue
 
                 for property in tool.all_properties(workload):
@@ -45,7 +53,7 @@ def collect(results: str):
 
                     # Don't compile tasks that are already completed.
                     finished = set(os.listdir(results))
-                    file = f'{workload.name},{strategy.name},{variant.name},{property}'
+                    file = f',{strategy.name},{variant.name},{property}'
                     if f'{file}.json' in finished:
                         continue
 
