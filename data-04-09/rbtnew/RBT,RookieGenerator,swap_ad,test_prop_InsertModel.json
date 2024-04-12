@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 23, "foundbug": true, "strategy": "RookieGenerator", "mutant": "swap_ad", "passed": 8, "property": "test_prop_InsertModel", "time": 0.007013}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "RookieGenerator", "mutant": "swap_ad", "passed": 0, "property": "test_prop_InsertModel", "time": 60}]

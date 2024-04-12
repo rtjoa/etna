@@ -12,27 +12,34 @@ def analyze(results: str, images: str):
 
     # Generate task bucket charts used in Figure 3.
 
-    strategies, colors = zip(*[
-        ('BespokeGenerator', '#000'),
-        ('New57_60_59_74_67Generator', "#005"),
-        # ('UniformAppsGenerator', '#005'),
-        # ('EntropyApproxAndUniformAppsGenerator', '#303'),
-        # ('EntropyApproxGenerator', '#500'),
-        # ('Apps4321Generator', '#050'),
-        ('TypeBasedGenerator', '#033'),
-        ('ManualTypeBasedGenerator', '#033'),
-        ('Tuned1TypeBasedGenerator', '#033'),
-    ])
+    # strategies, colors = zip(*[
+    #     ('BespokeGenerator', '#000'),
+    #     ('New57_60_59_74_67Generator', "#005"),
+    #     # ('UniformAppsGenerator', '#005'),
+    #     # ('EntropyApproxAndUniformAppsGenerator', '#303'),
+    #     # ('EntropyApproxGenerator', '#500'),
+    #     # ('Apps4321Generator', '#050'),
+    #     ('TypeBasedGenerator', '#033'),
+    #     ('ManualTypeBasedGenerator', '#033'),
+    #     ('Tuned1TypeBasedGenerator', '#033'),
+    # ])
+    # colors = list(reversed(colors))
+
     strategies = [
-        'BespokeGenerator',
-        'TypeBasedGenerator',
-        'ManualTypeBasedGenerator',
-        'ColorPropTBGenerator',
-        'HandTunedTBGenerator',
-        'SamplingEntropyTBGenerator',
-        'RookieGenerator',
-    ]
-    colors = list(reversed(colors))
+                    'TypeBasedGenerator',
+                    'ManualTypeBasedGenerator',
+                    # 'ColorPropTBGenerator',
+                    # 'RookieGenerator',
+                    # 'CondEntropyInvariantsGenerator',
+                    'CondEntropyInvariants2Generator',
+                    'ParentsCondEntropyInvariantsGenerator',
+                    'ParentsColorGenerator',
+                    'EntropyOnlyGenerator',
+                    'NoRedRedGenerator',
+                    'TypeBasedDepth3Generator',
+                    'TypeBasedDepth4Generator',
+        ]
+
     for workload in ['RBT']:
         tbl = df.groupby(['workload', 'strategy', 'task'], as_index=False).agg({"time": "max"})
         tbl.to_csv(f'{images}/{workload}_medians.csv')

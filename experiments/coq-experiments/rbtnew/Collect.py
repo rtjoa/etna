@@ -26,13 +26,19 @@ def collect(results: str):
 
 
             target_strategies = [
-                    'BespokeGenerator',
+                    # 'BespokeGenerator',
                     'TypeBasedGenerator',
                     'ManualTypeBasedGenerator',
-                    'ColorPropTBGenerator',
-                    'HandTunedTBGenerator',
-                    'SamplingEntropyTBGenerator',
-                    'RookieGenerator',
+                    # 'ColorPropTBGenerator',
+                    # 'RookieGenerator',
+                    # 'CondEntropyInvariantsGenerator',
+                    'CondEntropyInvariants2Generator',
+                    'ParentsCondEntropyInvariantsGenerator',
+                    'ParentsColorGenerator',
+                    'EntropyOnlyGenerator',
+                    'NoRedRedGenerator',
+                    'TypeBasedDepth3Generator',
+                    'TypeBasedDepth4Generator',
                 ]
             for s in target_strategies:
                 if not any(
@@ -40,6 +46,7 @@ def collect(results: str):
                     for strategy in tool.all_strategies(workload)
                 ):
                     print(f"Missing strategy {s}")
+                    print(tool.all_strategies(workload))
                     exit(1)
 
             for strategy in tool.all_strategies(workload):

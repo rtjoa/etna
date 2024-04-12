@@ -405,12 +405,19 @@ let () =
 
             l = ""
             for coq_project_file_line in coq_project_file_contents:
-                if not coq_project_file_line.startswith(
-                        RUNNERS_DIR) and coq_project_file_line != "":
+                if (
+                    not coq_project_file_line.startswith(RUNNERS_DIR)
+                    and not coq_project_file_line.startswith(STRATEGIES_DIR)
+                    and coq_project_file_line != ""
+                ):
                     s = coq_project_file_line + "\n"
                     coq_project_file_writer.write(s)
                     l += s
 
+            for strategy in generators + fuzzers:
+                s = f"{STRATEGIES_DIR}/{strategy}.v\n"
+                l += s
+                coq_project_file_writer.write(s)
             for strategy in generators + fuzzers:
                 s = f"{RUNNERS_DIR}/{strategy}_test_runner.v\n"
                 l += s

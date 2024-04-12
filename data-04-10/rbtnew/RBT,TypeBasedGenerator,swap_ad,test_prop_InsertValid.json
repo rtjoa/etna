@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 2394,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 4032,
+        "property": "test_prop_InsertValid",
+        "time": 0.11826600000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 16767,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 29161,
+        "property": "test_prop_InsertValid",
+        "time": 0.844558
+    },
+    {
+        "workload": "RBT",
+        "discards": 19235,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 32818,
+        "property": "test_prop_InsertValid",
+        "time": 0.9597150000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 3924,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 6697,
+        "property": "test_prop_InsertValid",
+        "time": 0.210624
+    },
+    {
+        "workload": "RBT",
+        "discards": 18456,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 31213,
+        "property": "test_prop_InsertValid",
+        "time": 0.927331
+    },
+    {
+        "workload": "RBT",
+        "discards": 13951,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 24045,
+        "property": "test_prop_InsertValid",
+        "time": 0.6960839999999999
+    },
+    {
+        "workload": "RBT",
+        "discards": 20641,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 35443,
+        "property": "test_prop_InsertValid",
+        "time": 1.037874
+    },
+    {
+        "workload": "RBT",
+        "discards": 3470,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 5725,
+        "property": "test_prop_InsertValid",
+        "time": 0.16983600000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 9877,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 16974,
+        "property": "test_prop_InsertValid",
+        "time": 0.49055000000000004
+    },
+    {
+        "workload": "RBT",
+        "discards": 4730,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 8011,
+        "property": "test_prop_InsertValid",
+        "time": 0.24882100000000001
+    }
+]

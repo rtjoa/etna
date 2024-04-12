@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 41996,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 72612,
+        "property": "test_prop_InsertPost",
+        "time": 2.1476010000000003
+    },
+    {
+        "workload": "RBT",
+        "discards": 53100,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 91574,
+        "property": "test_prop_InsertPost",
+        "time": 2.699321
+    },
+    {
+        "workload": "RBT",
+        "discards": 119732,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 206718,
+        "property": "test_prop_InsertPost",
+        "time": 6.022879
+    },
+    {
+        "workload": "RBT",
+        "discards": 269654,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 465366,
+        "property": "test_prop_InsertPost",
+        "time": 13.498600000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 62785,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 107917,
+        "property": "test_prop_InsertPost",
+        "time": 3.1583989999999997
+    },
+    {
+        "workload": "RBT",
+        "discards": 42245,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 71976,
+        "property": "test_prop_InsertPost",
+        "time": 2.128346
+    },
+    {
+        "workload": "RBT",
+        "discards": 210621,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 364169,
+        "property": "test_prop_InsertPost",
+        "time": 10.633897000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 30524,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 52310,
+        "property": "test_prop_InsertPost",
+        "time": 1.571538
+    },
+    {
+        "workload": "RBT",
+        "discards": 105307,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 181896,
+        "property": "test_prop_InsertPost",
+        "time": 5.292669
+    },
+    {
+        "workload": "RBT",
+        "discards": 113682,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "swap_ad",
+        "passed": 195028,
+        "property": "test_prop_InsertPost",
+        "time": 5.727653
+    }
+]

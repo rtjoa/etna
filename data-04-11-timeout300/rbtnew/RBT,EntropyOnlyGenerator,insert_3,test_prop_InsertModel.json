@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 2, "foundbug": true, "strategy": "EntropyOnlyGenerator", "mutant": "insert_3", "passed": 4, "property": "test_prop_InsertModel", "time": 0.00028100000000000005}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "EntropyOnlyGenerator", "mutant": "insert_3", "passed": 0, "property": "test_prop_InsertModel", "time": 300}]

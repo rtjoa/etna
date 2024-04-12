@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 0, "foundbug": true, "strategy": "TypeBasedDepth3Generator", "mutant": "delete_5", "passed": 2, "property": "test_prop_DeleteInsert", "time": 0.00014199999999999998}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "TypeBasedDepth3Generator", "mutant": "delete_5", "passed": 0, "property": "test_prop_DeleteInsert", "time": 60}]

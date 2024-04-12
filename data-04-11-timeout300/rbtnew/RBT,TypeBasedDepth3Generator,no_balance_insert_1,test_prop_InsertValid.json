@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "TypeBasedDepth3Generator", "mutant": "no_balance_insert_1", "passed": 0, "property": "test_prop_InsertValid", "time": 300}]
