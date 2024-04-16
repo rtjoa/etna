@@ -18,7 +18,7 @@ from benchtool.Util import ChangeDir, print_log, scandir_filter, recursive_scand
 class BenchTool(ABC):
     results: str
     __temp: str
-    _log_level: LogLevel = LogLevel.INFO
+    _log_level: LogLevel = LogLevel.DEBUG
     _replace_level: ReplaceLevel = ReplaceLevel.REPLACE
     _config: Config
     __variant: Optional[Variant]
@@ -85,6 +85,7 @@ class BenchTool(ABC):
 
             self._log(f'Building with mutant: {variant.name}', LogLevel.INFO)
             self._build(workload.path)
+        # self._build(workload.path)
 
         self.__variant = variant
 

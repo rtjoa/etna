@@ -3,11 +3,13 @@ import json
 import os
 
 from benchtool.Coq import Coq
-from benchtool.Types import TrialConfig, ReplaceLevel
+from benchtool.Types import TrialConfig, ReplaceLevel, LogLevel
 
 
 def collect(results: str):
-    tool = Coq(results=results, replace_level=ReplaceLevel.SKIP)
+    tool = Coq(results=results, replace_level=ReplaceLevel.SKIP,
+        # log_level=LogLevel.DEBUG
+    )
 
     for workload in tool.all_workloads():
         if workload.name not in ['RBT']:
@@ -26,16 +28,12 @@ def collect(results: str):
 
 
             target_strategies = [
-                    # 'BespokeGenerator',
+                    'BespokeGenerator',
                     'TypeBasedGenerator',
-                    'ManualTypeBasedGenerator',
-                    # 'ColorPropTBGenerator',
-                    # 'RookieGenerator',
-                    # 'CondEntropyInvariantsGenerator',
+                    'ManualTypeBased2Generator',
                     'CondEntropyInvariants2Generator',
                     'ParentsCondEntropyInvariantsGenerator',
-                    'ParentsColorGenerator',
-                    'EntropyOnlyGenerator',
+                    'EntropyOnly2Generator',
                     'NoRedRedGenerator',
                     'TypeBasedDepth3Generator',
                     'TypeBasedDepth4Generator',
@@ -50,8 +48,8 @@ def collect(results: str):
                     exit(1)
 
             for strategy in tool.all_strategies(workload):
-                if strategy.name not in target_strategies:
-                    continue
+                # if strategy.name not in target_strategies:
+                #     continue
 
                 for property in tool.all_properties(workload):
                     property = 'test_' + property

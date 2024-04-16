@@ -12,7 +12,11 @@ def parse_results(results: str) -> pd.DataFrame:
     entries = scandir_filter(results, os.path.isfile)
     entries = [e for e in entries if e.path.endswith('.json')]
 
-    df = pd.concat([pd.read_json(e.path, orient='records', typ='frame') for e in entries])
+    l = []
+    for e in entries:
+        print(e.path)
+        l.append(pd.read_json(e.path, orient='records', typ='frame'))
+    df = pd.concat(l)
 
     df['inputs'] = df.apply(lambda x: x['passed'] + (1 if x['foundbug'] else 0), axis=1)
     df = df.drop(['passed'], axis=1)

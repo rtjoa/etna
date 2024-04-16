@@ -39,6 +39,7 @@ class Coq(BenchTool):
             return list(dict.fromkeys(matches))
 
     def _build(self, workload_path: str):
+        print(f"Building {workload_path}")
         strategies = self._get_generator_names(workload_path)
         strategy_build_commands = map(lambda strategy: self._get_strategy_build_command(strategy),
                                       strategies)

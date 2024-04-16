@@ -40,7 +40,11 @@ class ChangeDir(object):
 
     def __enter__(self):
         self.old_dir = os.getcwd()
-        os.chdir(self.new_dir)
+        if os.path.isabs(self.new_dir):
+            new_dir = self.new_dir
+        else:
+            new_dir = os.path.join(self.old_dir, self.new_dir)
+        os.chdir(new_dir)
 
     def __exit__(self, _a, _b, _c):
         if not self.old_dir:

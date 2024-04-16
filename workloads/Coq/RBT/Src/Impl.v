@@ -283,3 +283,14 @@ Fixpoint size (t: Tree) : nat :=
   | E => 0
   | T c l k v r => 1 + size l + size r
   end.
+
+Definition mytree2 := E.
+Definition mytree := T R E 0 ((-7)) E.
+
+Definition trees__ :=
+    [E; E; E; T R E 0 (-7) E; T R E 4 5 (T B (T B (T R E (-3) 3 (T R E 1 4 E)) 6 (-1) (T R (T R E (-2) (-6) E) 1 4 E)) (-3) 3 (T B E (-6) 6 E)); T R E 4 (-4) E; T B (T B (T B (T R E 2 3 (T R E 2 (-1) E)) (-2) 4 E) (-3) 3 (T R (T B E 1 (-1) E) 4 2 E)) 4 3 E; T B (T R E (-1) 0 (T B (T R (T B E 1 1 E) 2 3 E) 0 2 E)) 1 1 E; T R E (-1) (-1) (T B (T B E (-2) 2 (T R (T B E (-2) (-2) E) 0 1 (T B E 2 (-1) E))) 1 0 (T R E 2 1 (T B (T B E 0 (-1) E) 1 (-1) (T B E 0 1 E)))); E; T R E 0 0 (T B E 0 0 E)].
+
+Print trees__.
+
+Derive (Arbitrary, Shrink) for Tree.
+(* Sample (arbitrarySized {Tree} 5). *)

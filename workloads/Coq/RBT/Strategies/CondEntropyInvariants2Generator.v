@@ -9,6 +9,9 @@ Import ListNotations.
 
 From RBT Require Import Impl Spec.
 
+Definition original_sz := 5.
+Definition new_sz := 12.
+
 (* Look up in list of backtrack weights *)
 Fixpoint get {a: Type} (l : list (nat * a)) (target_key : nat) (default : a): a :=
   match l with
@@ -16,10 +19,11 @@ Fixpoint get {a: Type} (l : list (nat * a)) (target_key : nat) (default : a): a 
     (* This branch should never return *)
     default
   | (key, value) :: l' =>
-    if Nat.eqb key target_key then
+    if Nat.eqb (original_sz - key) (new_sz - target_key) then
        value
     else get l' target_key default
   end.
+
 
 Definition manual_gen_tree :=
     fun s : nat =>
@@ -29,21 +33,21 @@ Definition manual_gen_tree :=
          | R =>
           get [
             (1, 500); (2, 500); (3, 506); (4, 994)
-          ] s 0
+          ] s 500
          | B =>
           get [
             (1, 500); (2, 500); (3, 506); (4, 994); (5, 22)
-          ] s 0
+          ] s 500
          end in
          let weight_leaf := match parent_color with 
          | R =>
           get [
             (1, 500); (2, 515); (3, 997); (4, 521)
-          ] s 0
+          ] s 500
          | B =>
           get [
             (1, 500); (2, 515); (3, 997); (4, 521); (5, 204)
-          ] s 0
+          ] s 500
          end in
          match size with
          | 0 => returnGen E
@@ -65,7 +69,7 @@ Definition manual_gen_tree :=
 
 #[global]
 Instance genTree : GenSized (Tree) := 
-  {| arbitrarySized n := manual_gen_tree n B |}.
+  {| arbitrarySized n := manual_gen_tree new_sz B |}.
 
 (* --------------------- Tests --------------------- *)
 

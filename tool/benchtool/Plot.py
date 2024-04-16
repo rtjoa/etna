@@ -114,7 +114,15 @@ def stacked_barchart_times(
     strategies = sorted(strategies,
                         key=lambda x: strategy_sorter[x] if x in strategy_sorter.keys() else -1)
 
-    no_gen = lambda s: ''.join(s.split('Generator'))
+    def no_gen(s):
+        s = ''.join(s.split('Generator'))
+        if s == "ManualTypeBased2":
+            return "OurTypeBased"
+        # if s == "CondEntropyEnvariants":
+        #     return "Conditional Entropy + Invariants"
+        # elif s == "ManualTypeBased2":
+        #     return "OurTypeBased"
+        return s
     for strategy, color in zip(strategies[::-1], extrapolated_colors):
         fig.add_trace(
             go.Bar(

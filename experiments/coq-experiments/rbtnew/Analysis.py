@@ -26,15 +26,12 @@ def analyze(results: str, images: str):
     # colors = list(reversed(colors))
 
     strategies = [
+                    'BespokeGenerator',
                     'TypeBasedGenerator',
-                    'ManualTypeBasedGenerator',
-                    # 'ColorPropTBGenerator',
-                    # 'RookieGenerator',
-                    # 'CondEntropyInvariantsGenerator',
+                    'ManualTypeBased2Generator',
                     'CondEntropyInvariants2Generator',
                     'ParentsCondEntropyInvariantsGenerator',
-                    'ParentsColorGenerator',
-                    'EntropyOnlyGenerator',
+                    'EntropyOnly2Generator',
                     'NoRedRedGenerator',
                     'TypeBasedDepth3Generator',
                     'TypeBasedDepth4Generator',
