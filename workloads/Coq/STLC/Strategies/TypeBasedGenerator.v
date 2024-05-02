@@ -10,6 +10,7 @@ From STLC Require Import Impl Spec.
 Derive (Arbitrary) for Typ.
 Derive (Arbitrary) for Expr.
 
+Definition gSized : G Expr := arbitrary.
 
 Definition test_prop_SinglePreserve :=
   forAll arbitrary (fun (e: Expr) =>

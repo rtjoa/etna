@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 1776710, "foundbug": true, "strategy": "ParentsColorGenerator", "mutant": "swap_ad", "passed": 2977826, "property": "test_prop_DeleteInsert", "time": 55.242537}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "ParentsColorGenerator", "mutant": "swap_ad", "passed": 0, "property": "test_prop_DeleteInsert", "time": 60}]

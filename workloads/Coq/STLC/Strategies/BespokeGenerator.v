@@ -8,7 +8,6 @@ Import MonadNotation.
 From STLC Require Import Impl Spec.
 
 Derive (Arbitrary) for Typ.
-Derive (Arbitrary) for Expr.
 
 Inductive bind : Ctx -> nat -> Typ -> Prop :=
 | BindNow   : forall tau env, bind (tau :: env) 0 tau

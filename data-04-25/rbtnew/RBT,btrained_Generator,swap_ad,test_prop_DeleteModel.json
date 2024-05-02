@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "btrained_Generator", "mutant": "swap_ad", "passed": 0, "property": "test_prop_DeleteModel", "time": 60}]

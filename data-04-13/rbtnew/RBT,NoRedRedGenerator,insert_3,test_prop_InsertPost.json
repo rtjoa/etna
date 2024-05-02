@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 1116,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 1435,
+        "property": "test_prop_InsertPost",
+        "time": 0.07528
+    },
+    {
+        "workload": "RBT",
+        "discards": 6046,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 7947,
+        "property": "test_prop_InsertPost",
+        "time": 0.309066
+    },
+    {
+        "workload": "RBT",
+        "discards": 1100,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 1385,
+        "property": "test_prop_InsertPost",
+        "time": 0.071691
+    },
+    {
+        "workload": "RBT",
+        "discards": 558,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 699,
+        "property": "test_prop_InsertPost",
+        "time": 0.045668
+    },
+    {
+        "workload": "RBT",
+        "discards": 811,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 979,
+        "property": "test_prop_InsertPost",
+        "time": 0.059556
+    },
+    {
+        "workload": "RBT",
+        "discards": 715,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 937,
+        "property": "test_prop_InsertPost",
+        "time": 0.05151
+    },
+    {
+        "workload": "RBT",
+        "discards": 561,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 742,
+        "property": "test_prop_InsertPost",
+        "time": 0.049184
+    },
+    {
+        "workload": "RBT",
+        "discards": 1884,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 2311,
+        "property": "test_prop_InsertPost",
+        "time": 0.110306
+    },
+    {
+        "workload": "RBT",
+        "discards": 0,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 2,
+        "property": "test_prop_InsertPost",
+        "time": 0.000107
+    },
+    {
+        "workload": "RBT",
+        "discards": 886,
+        "foundbug": true,
+        "strategy": "NoRedRedGenerator",
+        "mutant": "insert_3",
+        "passed": 1174,
+        "property": "test_prop_InsertPost",
+        "time": 0.063486
+    }
+]

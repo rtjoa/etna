@@ -26,17 +26,22 @@ def collect(results: str):
 
             run_trial = None
 
-
             target_strategies = [
-                    'BespokeGenerator',
-                    'TypeBasedGenerator',
-                    'ManualTypeBased2Generator',
-                    'CondEntropyInvariants2Generator',
-                    'ParentsCondEntropyInvariantsGenerator',
-                    'EntropyOnly2Generator',
-                    'NoRedRedGenerator',
-                    'TypeBasedDepth3Generator',
-                    'TypeBasedDepth4Generator',
+    "BespokeGenerator",
+    "TypeBasedGenerator",
+    "ManualTypeBased5Generator",
+    "ManualTypeBased5bGenerator",
+    "atrained_Generator",
+    "ctrained_Generator",
+    "ftrained_Generator",
+    "fine_consider_1Generator",
+    "fine_ignore_1Generator",
+    "fine_consider_2Generator",
+    "fine_ignore_2Generator",
+    "uniformish_ignoreGenerator",
+    "uniformish_considerGenerator",
+    "uniform_considerGenerator",
+    "uniform_ignoreGenerator",
                 ]
             for s in target_strategies:
                 if not any(

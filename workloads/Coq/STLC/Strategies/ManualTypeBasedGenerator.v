@@ -1,4 +1,3 @@
- 
 From QuickChick Require Import QuickChick. Import QcNotation.
 From Coq Require Import Bool ZArith List. Import ListNotations.
 From ExtLib Require Import Monad.
@@ -7,63 +6,128 @@ Import MonadNotation.
 
 From STLC Require Import Impl Spec.
 
-Definition manual_gen_typ :=
-    fun s : nat =>
-    (let
-       fix arb_aux (size : nat) : G Typ :=
-         match size with
-         | 0 => returnGen TBool
-         | S size' =>
-             freq [ (1, returnGen TBool);
-             (1,
-             bindGen (arb_aux size')
-               (fun p0 : Typ =>
-                bindGen (arb_aux size')
-                  (fun p1 : Typ => returnGen (TFun p0 p1))))]
+Fixpoint manual_gen_typ (size : nat) (last_callsite : nat) : G Typ :=
+  match size with
+  | 0 => returnGen TBool
+  | S size' =>
+      let weight_tbool := match (size,last_callsite) with 
+         | (1, 14) => 500
+         | (1, 15) => 500
+         | (2, 10) => 500
+         | _ => 500
          end in
-     arb_aux) s.
+      freq [ (weight_tbool, returnGen TBool);
+      (1000 - weight_tbool,
+      bindGen (manual_gen_typ size' 14)
+        (fun p0 : Typ =>
+         bindGen (manual_gen_typ size' 15)
+           (fun p1 : Typ => returnGen (TFun p0 p1))))]
+  end.
 
-#[global]
-Instance genTyp : GenSized (Typ) := 
-  {| arbitrarySized n := manual_gen_typ n |}.
+Fixpoint manual_gen_expr (size : nat) (last_callsite : nat) : G Expr :=
+  match size with
+  | 0 =>
+      let weight_var := match (size,last_callsite) with 
+         | (0, 11) => 500
+         | (0, 12) => 500
+         | (0, 13) => 500
+         | _ => 500
+         end in
+      freq [ (weight_var, bindGen arbitrary (fun p0 : nat => returnGen (Var p0)));
+      (1000 - weight_var, bindGen arbitrary (fun p0 : bool => returnGen (Bool p0)))]
+  | S size' =>
+      let weight_var := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+      let weight_boolean := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+      let weight_abs := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+      let weight_app := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+      freq [ (weight_var,
+      bindGen arbitrary (fun p0 : nat => returnGen (Var p0)));
+      (weight_boolean, bindGen arbitrary (fun p0 : bool => returnGen (Bool p0)));
+      (weight_abs,
+      bindGen (manual_gen_typ 2 10)
+        (fun p0 : Typ =>
+         bindGen (manual_gen_expr size' 11)
+           (fun p1 : Expr => returnGen (Abs p0 p1))));
+      (weight_app,
+      bindGen (manual_gen_expr size' 12)
+        (fun p0 : Expr =>
+         bindGen (manual_gen_expr size' 13)
+           (fun p1 : Expr => returnGen (App p0 p1))))]
+  end.
 
-Definition manual_gen_expr :=
-  fun s : nat =>
-  (let
-     fix arb_aux (size : nat) : G Expr :=
-       match size with
-       | 0 =>
-           oneOf [bindGen arbitrary (fun p0 : nat => returnGen (Var p0));
-           bindGen arbitrary (fun p0 : bool => returnGen (Bool p0))]
-       | S size' =>
-           freq [ (1,
-           bindGen arbitrary (fun p0 : nat => returnGen (Var p0)));
-           (1, bindGen arbitrary (fun p0 : bool => returnGen (Bool p0)));
-           (1,
-           bindGen arbitrary
-             (fun p0 : Typ =>
-              bindGen (arb_aux size')
-                (fun p1 : Expr => returnGen (Abs p0 p1))));
-           (1,
-           bindGen (arb_aux size')
-             (fun p0 : Expr =>
-              bindGen (arb_aux size')
-                (fun p1 : Expr => returnGen (App p0 p1))))]
-       end in
-   arb_aux) s.
-
-#[global]
-Instance genExpr : GenSized (Expr) := 
-  {| arbitrarySized n := manual_gen_expr n |}.
+Definition gSized :=
+  manual_gen_expr 5 20.
   
 Definition test_prop_SinglePreserve :=
-  forAll arbitrary (fun (e: Expr) =>
+  forAll gSized (fun (e: Expr) =>
     prop_SinglePreserve e).
 
 (*! QuickChick test_prop_SinglePreserve. *)
   
 Definition test_prop_MultiPreserve :=
-  forAll arbitrary (fun (e: Expr) =>
+  forAll gSized (fun (e: Expr) =>
     prop_MultiPreserve e).
   
 (*! QuickChick test_prop_MultiPreserve. *)
+
+

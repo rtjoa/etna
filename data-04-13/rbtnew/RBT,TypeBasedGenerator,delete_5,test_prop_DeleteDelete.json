@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 1895,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 3468,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.101354
+    },
+    {
+        "workload": "RBT",
+        "discards": 9736,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 16581,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.429942
+    },
+    {
+        "workload": "RBT",
+        "discards": 3867,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 6686,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.182148
+    },
+    {
+        "workload": "RBT",
+        "discards": 270,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 509,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.027587
+    },
+    {
+        "workload": "RBT",
+        "discards": 984,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 1631,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.052857
+    },
+    {
+        "workload": "RBT",
+        "discards": 6436,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 11263,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.292551
+    },
+    {
+        "workload": "RBT",
+        "discards": 8577,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 14847,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.376527
+    },
+    {
+        "workload": "RBT",
+        "discards": 2200,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 3887,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.09353600000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 2873,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 4935,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.11955400000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 13260,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 22667,
+        "property": "test_prop_DeleteDelete",
+        "time": 0.569964
+    }
+]

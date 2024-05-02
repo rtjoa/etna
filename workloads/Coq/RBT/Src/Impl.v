@@ -284,7 +284,7 @@ Fixpoint size (t: Tree) : nat :=
   | T c l k v r => 1 + size l + size r
   end.
 
-Definition mytree2 := E.
+(* Definition mytree2 := E.
 Definition mytree := T R E 0 ((-7)) E.
 
 Definition trees__ :=
@@ -294,3 +294,7 @@ Print trees__.
 
 Derive (Arbitrary, Shrink) for Tree.
 (* Sample (arbitrarySized {Tree} 5). *)
+
+Definition sizes := map size trees__.
+
+Print sizes. *)

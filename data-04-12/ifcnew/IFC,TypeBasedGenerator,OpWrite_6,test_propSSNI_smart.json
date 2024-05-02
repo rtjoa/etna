@@ -1,0 +1,1 @@
+[{"workload": "IFC", "discards": 0, "foundbug": false, "strategy": "TypeBasedGenerator", "mutant": "OpWrite_6", "passed": 0, "property": "test_propSSNI_smart", "time": 60}]

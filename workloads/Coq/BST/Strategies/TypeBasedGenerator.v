@@ -9,6 +9,8 @@ From BST Require Import Spec.
 
 Derive (Arbitrary, Show) for Tree.
 
+Definition gSized : G Tree := arbitrary.
+
 Definition test_prop_InsertValid   :=
   forAll arbitrary (fun (t: Tree)  =>
   forAll arbitrary (fun (k: nat)  =>

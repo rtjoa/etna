@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 1792,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 2397,
+        "property": "test_prop_InsertPost",
+        "time": 0.102827
+    },
+    {
+        "workload": "RBT",
+        "discards": 921,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 1154,
+        "property": "test_prop_InsertPost",
+        "time": 0.064985
+    },
+    {
+        "workload": "RBT",
+        "discards": 169,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 261,
+        "property": "test_prop_InsertPost",
+        "time": 0.025765999999999997
+    },
+    {
+        "workload": "RBT",
+        "discards": 529,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 745,
+        "property": "test_prop_InsertPost",
+        "time": 0.039074
+    },
+    {
+        "workload": "RBT",
+        "discards": 2631,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 3524,
+        "property": "test_prop_InsertPost",
+        "time": 0.153301
+    },
+    {
+        "workload": "RBT",
+        "discards": 883,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 1230,
+        "property": "test_prop_InsertPost",
+        "time": 0.059092
+    },
+    {
+        "workload": "RBT",
+        "discards": 3874,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 5173,
+        "property": "test_prop_InsertPost",
+        "time": 0.21460400000000002
+    },
+    {
+        "workload": "RBT",
+        "discards": 412,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 540,
+        "property": "test_prop_InsertPost",
+        "time": 0.036267
+    },
+    {
+        "workload": "RBT",
+        "discards": 2109,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 2660,
+        "property": "test_prop_InsertPost",
+        "time": 0.117199
+    },
+    {
+        "workload": "RBT",
+        "discards": 1541,
+        "foundbug": true,
+        "strategy": "ManualTypeBased2Generator",
+        "mutant": "insert_3",
+        "passed": 2001,
+        "property": "test_prop_InsertPost",
+        "time": 0.091526
+    }
+]

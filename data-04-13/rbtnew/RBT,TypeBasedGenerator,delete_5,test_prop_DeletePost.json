@@ -1,0 +1,102 @@
+[
+    {
+        "workload": "RBT",
+        "discards": 62731,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 108144,
+        "property": "test_prop_DeletePost",
+        "time": 2.558393
+    },
+    {
+        "workload": "RBT",
+        "discards": 1050,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 1747,
+        "property": "test_prop_DeletePost",
+        "time": 0.060857999999999995
+    },
+    {
+        "workload": "RBT",
+        "discards": 16433,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 28148,
+        "property": "test_prop_DeletePost",
+        "time": 0.6861630000000001
+    },
+    {
+        "workload": "RBT",
+        "discards": 3363,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 5666,
+        "property": "test_prop_DeletePost",
+        "time": 0.158516
+    },
+    {
+        "workload": "RBT",
+        "discards": 1303,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 2271,
+        "property": "test_prop_DeletePost",
+        "time": 0.073493
+    },
+    {
+        "workload": "RBT",
+        "discards": 1492,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 2494,
+        "property": "test_prop_DeletePost",
+        "time": 0.080513
+    },
+    {
+        "workload": "RBT",
+        "discards": 1231,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 2151,
+        "property": "test_prop_DeletePost",
+        "time": 0.069838
+    },
+    {
+        "workload": "RBT",
+        "discards": 3397,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 5843,
+        "property": "test_prop_DeletePost",
+        "time": 0.155452
+    },
+    {
+        "workload": "RBT",
+        "discards": 26540,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 46572,
+        "property": "test_prop_DeletePost",
+        "time": 1.107244
+    },
+    {
+        "workload": "RBT",
+        "discards": 6032,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "delete_5",
+        "passed": 10348,
+        "property": "test_prop_DeletePost",
+        "time": 0.262418
+    }
+]
