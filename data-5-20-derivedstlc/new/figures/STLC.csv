@@ -1,0 +1,6 @@
+TypeBasedGenerator:            0 13  3  4  0
+ManualTypeBasedGenerator:      0 11  5  0  4
+OkTypedGenerator:              0  0 12  4  4
+StructureStack2Generator:      0  0  8  3  9
+WellTypedStack2Generator:      0  0  3  9  8
+WellTypedGenerator:            0  0  0  9 11

@@ -1,0 +1,1 @@
+[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "uniformish_ignoreGenerator", "mutant": "delete_4", "passed": 0, "property": "test_prop_DeleteValid", "time": 60}]

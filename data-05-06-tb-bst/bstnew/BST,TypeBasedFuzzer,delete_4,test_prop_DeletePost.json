@@ -1,0 +1,1 @@
+[{"workload": "BST", "discards": 0, "foundbug": false, "strategy": "TypeBasedFuzzer", "mutant": "delete_4", "passed": 0, "property": "test_prop_DeletePost", "time": 60}]

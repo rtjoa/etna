@@ -1,0 +1,145 @@
+python3 experiments/coq-experiments/new/Analysis.py --data=data/new --figures=figures
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,substTop_no_shift_back,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,substTop_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_abs_no_incr,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,subst_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_leq,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,substTop_no_shift_back,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,shift_var_none,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,shift_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_abs_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,EntropyApproxBespokeGenerator,shift_var_none,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_leq,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,OkTypedGenerator,subst_var_all,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,substTop_no_shift,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,TypeBasedGenerator,subst_abs_no_incr,test_prop_MultiPreserve.json
+/space/tjoa/etna/data/new/STLC,ManualTypeBasedGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,BespokeGenerator,shift_var_all,test_prop_SinglePreserve.json
+/space/tjoa/etna/data/new/STLC,Apps4321BespokeGenerator,subst_abs_no_shift,test_prop_MultiPreserve.json
+                strategy variable  value
+ManualTypeBasedGenerator      0.1      0
+ManualTypeBasedGenerator      1.0     11
+ManualTypeBasedGenerator     10.0      5
+ManualTypeBasedGenerator     60.0      0
+ManualTypeBasedGenerator     rest      4 
+
+
+        strategy variable  value
+OkTypedGenerator      0.1      0
+OkTypedGenerator      1.0      0
+OkTypedGenerator     10.0     11
+OkTypedGenerator     60.0      5
+OkTypedGenerator     rest      4 
+
+
+          strategy variable  value
+TypeBasedGenerator      0.1      0
+TypeBasedGenerator      1.0     12
+TypeBasedGenerator     10.0      4
+TypeBasedGenerator     60.0      1
+TypeBasedGenerator     rest      3 
+
+

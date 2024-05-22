@@ -1,0 +1,1 @@
+[{"workload": "BST", "discards": 645123, "foundbug": true, "strategy": "ManualTypeBasedGenerator", "mutant": "union_8", "passed": 507759, "property": "test_prop_DeleteUnion", "time": 26.164819}, {"workload": "BST", "discards": 0, "foundbug": false, "strategy": "ManualTypeBasedGenerator", "mutant": "union_8", "passed": 0, "property": "test_prop_DeleteUnion", "time": 60}]

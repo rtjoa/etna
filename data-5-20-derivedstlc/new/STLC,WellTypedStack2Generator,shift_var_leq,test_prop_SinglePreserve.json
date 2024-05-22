@@ -1,0 +1,1 @@
+[{"workload": "STLC", "discards": 0, "foundbug": false, "strategy": "WellTypedStack2Generator", "mutant": "shift_var_leq", "passed": 0, "property": "test_prop_SinglePreserve", "time": 60}]
