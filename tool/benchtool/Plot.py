@@ -27,6 +27,7 @@ class Bar:
     values: list[int]
     color: str = None
 
+import code
 
 def stacked_barchart_times(
     case: str,
@@ -69,6 +70,16 @@ def stacked_barchart_times(
     results = results.reset_index()
 
     results = results.melt(id_vars=['strategy'], value_vars=limits + ['rest'])
+    grouped_df = results.groupby('strategy')
+
+    cts_keys = [(list(item.value), key) for key, item in grouped_df]
+    cts_keys.sort(reverse=True)
+    with open(f"{image_path}/{case}.csv", "w") as f:
+        f.writelines(
+            f"{key}\t" + "\t".join(map(str, cts)) + "\n"
+            for cts, key in cts_keys
+        )
+
 
     if not colors:
         colors = [
@@ -116,8 +127,8 @@ def stacked_barchart_times(
 
     def no_gen(s):
         s = ''.join(s.split('Generator'))
-        if s == "ManualTypeBased2":
-            return "OurTypeBased"
+        # if s == "ManualTypeBased2":
+        #     return "OurTypeBased"
         # if s == "CondEntropyEnvariants":
         #     return "Conditional Entropy + Invariants"
         # elif s == "ManualTypeBased2":

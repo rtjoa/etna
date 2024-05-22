@@ -193,6 +193,12 @@ class Coq(BenchTool):
                     end = stdout_data.find("|]")
                     result = stdout_data[start + 2:end]
                     self._log(f"{params.strategy} Result: {result}", LogLevel.INFO)
+                    # print("stdout===")
+                    # print(stdout_data)
+                    # print("stderr===")
+                    # print(stderr_data)
+                    # print("result===")
+                    # print(result)
                     json_result = json.loads(result)
                     trial_result["foundbug"] = json_result["result"] in [
                         "failed", "expected_failure"
