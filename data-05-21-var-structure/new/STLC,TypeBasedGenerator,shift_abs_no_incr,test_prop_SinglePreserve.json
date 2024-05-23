@@ -1,1 +1,102 @@
-[{"workload": "STLC", "discards": 11571, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 6456, "property": "test_prop_SinglePreserve", "time": 0.548845}, {"workload": "STLC", "discards": 19519, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 10690, "property": "test_prop_SinglePreserve", "time": 0.893835}, {"workload": "STLC", "discards": 12584, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 6764, "property": "test_prop_SinglePreserve", "time": 0.5707960000000001}, {"workload": "STLC", "discards": 1769, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 921, "property": "test_prop_SinglePreserve", "time": 0.102851}, {"workload": "STLC", "discards": 27775, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 15059, "property": "test_prop_SinglePreserve", "time": 1.248386}, {"workload": "STLC", "discards": 9951, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 5435, "property": "test_prop_SinglePreserve", "time": 0.462521}, {"workload": "STLC", "discards": 12532, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 6911, "property": "test_prop_SinglePreserve", "time": 0.569326}, {"workload": "STLC", "discards": 10701, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 5807, "property": "test_prop_SinglePreserve", "time": 0.469233}, {"workload": "STLC", "discards": 2287, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 1276, "property": "test_prop_SinglePreserve", "time": 0.12087099999999999}, {"workload": "STLC", "discards": 12947, "foundbug": true, "strategy": "TypeBasedGenerator", "mutant": "shift_abs_no_incr", "passed": 7200, "property": "test_prop_SinglePreserve", "time": 0.615077}]
+[
+    {
+        "workload": "STLC",
+        "discards": 11571,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 6456,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.548845
+    },
+    {
+        "workload": "STLC",
+        "discards": 19519,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 10690,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.893835
+    },
+    {
+        "workload": "STLC",
+        "discards": 12584,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 6764,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.5707960000000001
+    },
+    {
+        "workload": "STLC",
+        "discards": 1769,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 921,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.102851
+    },
+    {
+        "workload": "STLC",
+        "discards": 27775,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 15059,
+        "property": "test_prop_SinglePreserve",
+        "time": 1.248386
+    },
+    {
+        "workload": "STLC",
+        "discards": 9951,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 5435,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.462521
+    },
+    {
+        "workload": "STLC",
+        "discards": 12532,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 6911,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.569326
+    },
+    {
+        "workload": "STLC",
+        "discards": 10701,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 5807,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.469233
+    },
+    {
+        "workload": "STLC",
+        "discards": 2287,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 1276,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.12087099999999999
+    },
+    {
+        "workload": "STLC",
+        "discards": 12947,
+        "foundbug": true,
+        "strategy": "TypeBasedGenerator",
+        "mutant": "shift_abs_no_incr",
+        "passed": 7200,
+        "property": "test_prop_SinglePreserve",
+        "time": 0.615077
+    }
+]

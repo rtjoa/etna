@@ -1,0 +1,1 @@
+[{"workload": "STLC", "discards": 0, "foundbug": false, "strategy": "TbStructureWellGenerator", "mutant": "shift_var_leq", "passed": 0, "property": "test_prop_MultiPreserve", "time": 60}]

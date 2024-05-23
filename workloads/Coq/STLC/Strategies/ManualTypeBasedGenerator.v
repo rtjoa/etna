@@ -100,9 +100,139 @@ Fixpoint manual_gen_expr (size : nat) (last_callsite : nat) : G Expr :=
          | (5, 20) => 500
          | _ => 500
          end in
-      freq [ (weight_var,
-      bindGen arbitrary (fun p0 : nat => returnGen (Var p0)));
-      (weight_boolean, bindGen arbitrary (fun p0 : bool => returnGen (Bool p0)));
+      freq [
+      (weight_var,
+
+         let weight_1 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_1, returnGen 1); (1000-weight_1, returnGen 0)])
+        (fun n1 : nat =>  
+         let weight_2 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_2, returnGen 2); (1000-weight_2, returnGen 0)])
+        (fun n2 : nat =>  
+         let weight_4 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_4, returnGen 4); (1000-weight_4, returnGen 0)])
+        (fun n4 : nat =>  
+         let weight_8 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_8, returnGen 8); (1000-weight_8, returnGen 0)])
+        (fun n8 : nat =>  
+         let weight_16 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_16, returnGen 16); (1000-weight_16, returnGen 0)])
+        (fun n16 : nat =>  
+         let weight_32 := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        bindGen (freq [ (weight_32, returnGen 32); (1000-weight_32, returnGen 0)])
+        (fun n32 : nat =>  
+        let p1 := n1+n2+n4+n8+n16+n32 in
+        returnGen (Var p1))
+      ))))));
+      (weight_boolean,
+        let weight_true := match (size,last_callsite) with 
+         | (1, 11) => 500
+         | (1, 12) => 500
+         | (1, 13) => 500
+         | (2, 11) => 500
+         | (2, 12) => 500
+         | (2, 13) => 500
+         | (3, 11) => 500
+         | (3, 12) => 500
+         | (3, 13) => 500
+         | (4, 11) => 500
+         | (4, 12) => 500
+         | (4, 13) => 500
+         | (5, 20) => 500
+         | _ => 500
+         end in
+        freq [ (weight_true, returnGen (Bool true)); (1000 - weight_true, returnGen (Bool false))]
+      );
       (weight_abs,
       bindGen (manual_gen_typ 2 10)
         (fun p0 : Typ =>
