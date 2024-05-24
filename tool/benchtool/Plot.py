@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from itertools import zip_longest
 from PIL import ImageColor
 from benchtool.Analysis import overall_solved, task_average
 import pandas as pd
@@ -71,6 +72,26 @@ def stacked_barchart_times(
 
     results = results.melt(id_vars=['strategy'], value_vars=limits + ['rest'])
     grouped_df = results.groupby('strategy')
+
+    strategy_to_times = {}
+    for (strategy, df_strat) in df.groupby('strategy'):
+        if strategy not in strategies:
+            continue
+        times = []
+        for (_, df_task) in df_strat.groupby('task'):
+            if df_task.foundbug.all():
+                times.append(df_task.time.max())
+        times.sort()
+        strategy_to_times[strategy] = times
+    with open(f"{image_path}/{case}-times.csv", "w") as f:
+        tab = '\t'
+        f.write(tab.join(strategy for strategy in strategies))
+        f.write('\n')
+        for row in zip_longest(*[strategy_to_times[strategy] for strategy in strategies], fillvalue=''):
+            f.write(tab.join(map(str, row)))
+            f.write('\n')
+            # f.write(f"{strategy}\t{tab.join(map(str,times))}\n")
+
 
     cts_keys = [(list(item.value), key) for key, item in grouped_df]
     cts_keys.sort(reverse=True)
