@@ -1,0 +1,8 @@
+TypeBasedGenerator	0	12	4	2	2
+LDGenerator	0	1	11	4	4
+LDStructureMightGenerator	0	0	1	9	10
+LDStructureWellGenerator	0	0	0	0	20
+LDStructureVarGenerator	0	0	0	0	20
+LDEqWellGenerator	0	0	0	0	20
+LDEqVarGenerator	0	0	0	0	20
+LDEqMightGenerator	0	0	0	0	20

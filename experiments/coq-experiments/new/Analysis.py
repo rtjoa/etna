@@ -12,22 +12,26 @@ def analyze(results: str, images: str):
 
     # Generate task bucket charts used in Figure 3.
 
-    strategies, colors = zip(*[
-        ('BespokeGenerator', '#000'),
-        ('UniformAppsGenerator', '#005'),
-        ('EntropyApproxAndUniformAppsGenerator', '#303'),
-        ('EntropyApproxGenerator', '#500'),
-        ('Apps4321Generator', '#050'),
-        ('W95_996_301_18_834_309_92Generator', '#330'),
-        ('TypeBasedGenerator', '#033'),
-        ('ManualTypeBasedGenerator', '#033'),
-    ])
-    colors = list(reversed(colors))
+    strategies = [
+    # # class: bespoke
+    # "BespokeGenerator",
+    # "LBespokeGenerator",
+    # "LBespokeACEGenerator",
+    # "LBespokeApproxConstructorEntropyGenerator",
+    # class: type-based
+    "TypeBasedGenerator",
+    "LDGenerator",
+    "LDEqMightGenerator",
+    "LDEqVarGenerator",
+    "LDEqWellGenerator",
+    "LDStructureMightGenerator",
+    "LDStructureVarGenerator",
+    "LDStructureWellGenerator",
+    ]
     for workload in ['STLC']:
         times = partial(stacked_barchart_times, case=workload, df=df)
         times(
             strategies=strategies,
-            colors=colors,
             limits=[0.1, 1, 10, 60],
             limit_type='time',
             image_path=images,

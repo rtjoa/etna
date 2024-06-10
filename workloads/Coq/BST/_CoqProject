@@ -1,15 +1,15 @@
 -Q . BST
 Src/Impl.v
 Src/Spec.v
-Strategies/BespokeGenerator.v
-Strategies/IgnoreGenerator.v
-Strategies/ConsiderGenerator.v
-Strategies/ManualTypeBasedGenerator.v
+Strategies/LEqGenerator.v
+Strategies/LGenerator.v
+Strategies/LExceptGenerator.v
+Strategies/TBEqGenerator.v
+Strategies/TBExceptGenerator.v
 Strategies/TypeBasedGenerator.v
-Strategies/TypeBasedFuzzer.v
-Runners/BespokeGenerator_test_runner.v
-Runners/IgnoreGenerator_test_runner.v
-Runners/ConsiderGenerator_test_runner.v
-Runners/ManualTypeBasedGenerator_test_runner.v
+Runners/LEqGenerator_test_runner.v
+Runners/LGenerator_test_runner.v
+Runners/LExceptGenerator_test_runner.v
+Runners/TBEqGenerator_test_runner.v
+Runners/TBExceptGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v
-Runners/TypeBasedFuzzer_test_runner.v

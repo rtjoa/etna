@@ -24,19 +24,33 @@ def collect(results: str):
 
             run_trial = None
 
-            for strategy in tool.all_strategies(workload):
-                if strategy.name not in [
-                    'BespokeGenerator',
-                    'EntropyApproxGenerator',
-                    'EntropyApproxAndUniformAppsGenerator',
-                    'UniformAppsGenerator',
-                    'Apps4321Generator',
-                    'W95_996_301_18_834_309_92Generator',
-                    'TypeBasedGenerator',
-                    'ManualTypeBasedGenerator',
-                ]:
-                    continue
+            target_strategies = [
+    # class: bespoke
+    "BespokeGenerator",
+    "LBespokeGenerator",
+    "LBespokeACEGenerator",
+    "LBespokeApproxConstructorEntropyGenerator",
 
+    # class: type-based
+    "TypeBasedGenerator",
+    "LDGenerator",
+    "LDEqMightGenerator",
+    "LDEqVarGenerator",
+    "LDEqWellGenerator",
+    "LDStructureMightGenerator",
+    "LDStructureVarGenerator",
+    "LDStructureWellGenerator",
+            ]
+            for s in target_strategies:
+                if not any(
+                    strategy.name == s
+                    for strategy in tool.all_strategies(workload)
+                ):
+                    print(f"Missing strategy {s}")
+                    print(tool.all_strategies(workload))
+                    exit(1)
+
+            for strategy in tool.all_strategies(workload):
                 for property in tool.all_properties(workload):
                     property = 'test_' + property
                     if tasks_json['tasks'] and property not in tasks_json['tasks'][variant.name]:
@@ -56,7 +70,7 @@ def collect(results: str):
                                       property=property,
                                       trials=10,
                                       timeout=60,
-                                      short_circuit=True)
+                                      short_circuit=False)
                     run_trial(cfg)
 
 

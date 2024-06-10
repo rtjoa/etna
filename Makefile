@@ -54,19 +54,23 @@ collectnew:
 	python3 qc-checker.py use_new_qc
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/new
+	timeout 3 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
+	(cd /space/tjoa/etna/workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new
 
 analyzenew:
-	python3 experiments/coq-experiments/new/Analysis.py --data=$(DATA)/new --figures=$(FIGURES)
+	python3 experiments/coq-experiments/new/Analysis.py --data=$(DATA)/new --figures=$(DATA)/newfigures
 
 collectbstnew:
 	python3 qc-checker.py use_new_qc
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/bstnew
-	python3 experiments/coq-experiments/bstnew/Collect.py --data=$(DATA)/bstnew
+	timeout 3 python3 experiments/coq-experiments/bstnew/Collect.py --data=$(DATA)/bstnew || true
+	(cd /space/tjoa/etna/workloads/Coq/BST/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
+	python3 experiments/coq-experiments/bstnew/Collect.py --data=$(DATA)/bstnew 
 
 analyzebstnew:
-	python3 experiments/coq-experiments/bstnew/Analysis.py --data=$(DATA)/bstnew --figures=$(FIGURES)
+	python3 experiments/coq-experiments/bstnew/Analysis.py --data=$(DATA)/bstnew --figures=$(DATA)/bstnewfigures
 
 collectrbtnew:
 	python3 qc-checker.py use_new_qc

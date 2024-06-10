@@ -24,19 +24,23 @@ def collect(results: str):
 
             run_trial = None
 
+            target_strategies = [
+        "TypeBasedGenerator",
+        "LEqGenerator",
+        "LExceptGenerator",
+        "TBEqGenerator",
+        "TBExceptGenerator",
+        "LGenerator",
+            ]
+            for s in target_strategies:
+                if not any(
+                    strategy.name == s
+                    for strategy in tool.all_strategies(workload)
+                ):
+                    print(f"Missing strategy {s}")
+                    print(tool.all_strategies(workload))
+                    exit(1)
             for strategy in tool.all_strategies(workload):
-                if strategy.name not in [
-                    'BespokeGenerator',
-                    'New57_60_59_74_67Generator',
-                    'TypeBasedGenerator',
-                    'ManualTypeBasedGenerator',
-                    'Tuned1TypeBasedGenerator',
-                    # 'EntropyApproxGenerator',
-                    # 'EntropyApproxAndUniformAppsGenerator',
-                    # 'UniformAppsGenerator',
-                    # 'Apps4321Generator',
-                ]:
-                    continue
 
                 for property in tool.all_properties(workload):
                     property = 'test_' + property
@@ -55,9 +59,9 @@ def collect(results: str):
                     cfg = TrialConfig(workload=workload,
                                       strategy=strategy.name,
                                       property=property,
-                                      trials=10,
+                                      trials=5,
                                       timeout=60,
-                                      short_circuit=True)
+                                      short_circuit=False)
                     run_trial(cfg)
 
 

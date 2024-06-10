@@ -3,6 +3,3 @@ TypeBasedGenerator	0	12	4	1	3
 ManualTypeBasedGenerator	0	10	6	0	4
 TbStructureMightGenerator	0	10	4	6	0
 TbStructureWellGenerator	0	0	6	7	7
-TbStructureVarGenerator	0	0	0	0	20
-TbEqWellGenerator	0	0	0	0	20
-TbEqVarGenerator	0	0	0	0	20
