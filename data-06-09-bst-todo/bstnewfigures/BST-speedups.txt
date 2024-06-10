@@ -1,0 +1,4 @@
+OTBG tuned for diverse (w.r.t default equality) valid BSTs is 1.5x faster than QuickChick type-based generator
+OTBG tuned for diverse (w.r.t. BST structure) valid BSTs is 0.6x faster than QuickChick type-based generator
+OTBG tuned for diverse (w.r.t default equality) valid BSTs is 9.4x faster than Our type-based generator (OTBG)
+OTBG tuned for diverse (w.r.t. BST structure) valid BSTs is 4.4x faster than Our type-based generator (OTBG)

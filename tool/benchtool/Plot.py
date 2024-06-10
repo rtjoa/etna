@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from statistics import geometric_mean
+from collections import defaultdict
 from itertools import zip_longest
 from PIL import ImageColor
 from benchtool.Analysis import overall_solved, task_average
@@ -78,11 +80,12 @@ def stacked_barchart_times(
     grouped_df = results.groupby('strategy')
 
     strategy_to_times = {}
+    strategy_to_task_to_time = defaultdict(dict)
     for (strategy, df_strat) in df.groupby('strategy'):
         if strategy not in strategies:
             continue
         times = []
-        for (_, df_task) in df_strat.groupby('task'):
+        for (task, df_task) in df_strat.groupby('task'):
             import code
             num_trials = len(df_task)
             assert num_trials == 5 # remove if we add short circuiting
@@ -95,11 +98,13 @@ def stacked_barchart_times(
                 # use nsmallest(num_tasks // 2 + 1) like so if we have short circuiting:
                 # pd.Series([50, 40, 10, 30]).nsmallest(3).iloc[-1]
                 t = df_task.time.median()
-                times.append(t)
                 assert t != 60
+                times.append(t)
+                strategy_to_task_to_time[strategy][task] = t
         times.sort()
         strategy_to_times[strategy] = times
-    trivial_cutoff_time = 0.5
+
+    trivial_cutoff_time = 0
     num_found_by_all_in_cutoff = min(
         bisect.bisect_left(times, trivial_cutoff_time)
         for times in strategy_to_times.values()
@@ -111,6 +116,29 @@ def stacked_barchart_times(
         "LEqGenerator": "OTBG tuned for diverse (w.r.t default equality) valid BSTs",
         "LExceptGenerator": "OTBG tuned for diverse (w.r.t. BST structure) valid BSTs",
     }
+    def strat_name(strategy):
+        return strat_names.get(strategy, strategy)
+
+
+    baselines = [
+        "TypeBasedGenerator",
+        "LGenerator",
+    ]
+    with open(f"{image_path}/{case}-speedups.txt", "w") as f:
+        for baseline_strategy in baselines:
+            for strategy in strategies:
+                if strategy in baselines:
+                    continue
+                speedups = []
+                for task, baseline_time in strategy_to_task_to_time[baseline_strategy].items():
+                    if task in strategy_to_task_to_time[strategy]:
+                        strat_time = strategy_to_task_to_time[strategy][task]
+                        speedups.append(baseline_time / strat_time)
+                avg_speedup = geometric_mean(speedups)
+                f.write(f"{strat_name(strategy)} is {round(avg_speedup, 1)}x faster than {strat_name(baseline_strategy)}\n")
+            
+
+
     sns.set_context("paper")
     sns.set_style("whitegrid",{'font.family':'serif', 'font.serif':'Times New Roman', 'axes.edgecolor': 'white','grid.color': '#DCDCDC'})
     # https://seaborn.pydata.org/tutorial/color_palettes.html#using-categorical-color-brewer-palettes
@@ -154,15 +182,15 @@ def stacked_barchart_times(
         key=lambda p: list(strat_names.keys()).index(p[0])
     ):
         time_points = [0] + times + [60]
-        bugs_found = list(range(len(times) + 2))
+        bugs_found = [0] + list(range(1, len(times) + 1)) + [len(times)]
         for t, b in zip(time_points, bugs_found):
             data.append({
                 "Time (s)": t,
                 "# bugs found": b,
-                "Strategy": strat_names.get(strategy, strategy),
+                "Strategy": strat_name(strategy),
             })
     df = pd.DataFrame(data)
-    sns.lineplot(
+    ax = sns.lineplot(
         data=df,
         x="Time (s)",
         y="# bugs found",
@@ -171,8 +199,9 @@ def stacked_barchart_times(
         # alpha=0.7,
         linewidth=4,
     )
+    ax.set(xscale="log")
 
-    plt.gca().set_ylim(bottom=num_found_by_all_in_cutoff,top=max_found + 2)
+    plt.gca().set_ylim(bottom=num_found_by_all_in_cutoff,top=max_found + 1)
     plt.legend(title='Strategy', loc='lower right')
     plt.savefig(f"{image_path}/{case}-med-times.svg")
 
