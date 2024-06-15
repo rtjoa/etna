@@ -13,20 +13,36 @@ def analyze(results: str, images: str):
     # Generate task bucket charts used in Figure 3.
 
     strategies = [
-    # # class: bespoke
-    # "BespokeGenerator",
-    # "LBespokeGenerator",
-    # "LBespokeACEGenerator",
-    # "LBespokeApproxConstructorEntropyGenerator",
+    # class: bespoke
+    "BespokeGenerator",
+    "LBespokeGenerator",
+    "S_BespokeACELR03Bound10Generator",
+
     # class: type-based
-    "TypeBasedGenerator",
-    "LDGenerator",
-    "LDEqMightGenerator",
-    "LDEqVarGenerator",
-    "LDEqWellGenerator",
-    "LDStructureMightGenerator",
-    "LDStructureVarGenerator",
-    "LDStructureWellGenerator",
+    # "TypeBasedGenerator",
+    # "LDGenerator",
+    # "LDEqMightGenerator",
+    # "LDEqVarGenerator",
+    # "LDEqWellGenerator",
+    # "LDStructureMightGenerator",
+    # "LDStructureVarGenerator",
+    # "LDStructureWellGenerator",
+# "LDThinInitGenerator",
+# "LSDThinGenerator",
+# "LDMayStructureBound05Generator",
+# "LDMayStructureBound10Generator",
+# "LDMayEqBound05Generator",
+# "LDMayEqBound10Generator",
+# "LSDMayStructureBound05Generator",
+# "LSDMayStructureBound10Generator",
+# "LSDMayEqBound05Generator",
+# "LSDMayEqBound10Generator",
+
+# "LSDMayEqBound05Generator",
+# "LSDMayEqBound10Generator",
+# "LSDThinGenerator",
+# "TypeBasedGenerator",
+
     ]
     for workload in ['STLC']:
         times = partial(stacked_barchart_times, case=workload, df=df)

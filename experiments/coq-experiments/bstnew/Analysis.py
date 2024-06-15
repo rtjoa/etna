@@ -15,11 +15,8 @@ def analyze(results: str, images: str):
 
     strategies = [
         "TypeBasedGenerator",
-        "LEqGenerator",
-        "LExceptGenerator",
-        # "TBEqGenerator",
-        # "TBExceptGenerator",
-        "LGenerator",
+        "B_LDEqLR30Bound10Generator",
+        "B_LDGenerator",
     ]
 
     for workload in ['BST']:

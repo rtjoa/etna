@@ -1,0 +1,7 @@
+OTBG tuned for diverse samples is 4.2x faster than QuickChick type-based generator
+OTBG tuned for diverse samples is 2.4x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)
+LSDMayEqBound10Generator -> OTBG tuned for diverse samples

@@ -1,0 +1,2 @@
+OBG tuned for approx. constructor entropy is 1.9x faster than Our bespoke generator with fixed init. sizes (OBG)
+OBG tuned for approx. constructor entropy is 2.7x faster than Bespoke generator

@@ -87,9 +87,13 @@ def stacked_barchart_times(
         times = []
         for (task, df_task) in df_strat.groupby('task'):
             import code
+            assert len(df_task) == 5 # remove if we add short circuiting
+            if len(df_task) % 2 == 0:
+                df_task = df_task[:-1]
+
             num_trials = len(df_task)
-            assert num_trials == 5 # remove if we add short circuiting
             assert num_trials % 2, "num trials must be odd"
+
             majority_found = df_task.foundbug.sum() * 2 > num_trials
             # if df_task.foundbug.sum() not in [0, 5]:
             #     code.interact(local=locals())
@@ -109,33 +113,70 @@ def stacked_barchart_times(
         bisect.bisect_left(times, trivial_cutoff_time)
         for times in strategy_to_times.values()
     )
-    max_found = max(len(times) for tiems in strategy_to_times.values())
+    max_found = max(len(times) for times in strategy_to_times.values())
     strat_names = {
+        "BespokeGenerator": "Bespoke generator",
+        "LBespokeGenerator": "Our bespoke generator with fixed init. sizes (OBG)",
+        "LBespokeApproxConstructorEntropyGenerator": "OBG tuned for approx. constructor entropy",
+        "LBespokeACEGenerator": "OBG test tuning",
+        "S_BespokeACELR03Bound10Generator": "OBG tuned for approx. constructor entropy (bound=0.1)",
+
         "TypeBasedGenerator": "QuickChick type-based generator",
         "LGenerator": "Our type-based generator (OTBG)",
         "LEqGenerator": "OTBG tuned for diverse (w.r.t default equality) valid BSTs",
         "LExceptGenerator": "OTBG tuned for diverse (w.r.t. BST structure) valid BSTs",
+
+
+        "LSDInitGenerator" : "Our type-based generator (OTBG)",
+        "R_LSDEqBound05Generator": "OTBG tuned for diverse (w.r.t. default equality) valid RBTs (bound=0.05)",
+        "R_LSDEqBound10Generator": "OTBG tuned for diverse valid RBTs (bound=0.1)",
+
+        "LSDThinGenerator": "Our type-based generator (OTBG)",
+        "LSDMayEqBound10Generator": "OTBG tuned for diverse samples",
+
+        "B_LDGenerator": "Our type-based generator (OTBG)",
+        "B_LDEqLR30Bound10Generator": "OTBG tuned for diverse valid BSTs (bound=0.1)",
+
+
+# "LDThinInitGenerator": "",
+# "LSDMayEqBound10Generator": "",
     }
     def strat_name(strategy):
         return strat_names.get(strategy, strategy)
-
+    
 
     baselines = [
         "TypeBasedGenerator",
         "LGenerator",
+        "LBespokeGenerator",
+        "BespokeGenerator",
+        "LSDInitGenerator",
+        "LSDGenerator",
+        "LSDThinGenerator",
+        "B_LDGenerator",
     ]
     with open(f"{image_path}/{case}-speedups.txt", "w") as f:
-        for baseline_strategy in baselines:
-            for strategy in strategies:
-                if strategy in baselines:
+        for strategy in strategies:
+            if strategy in baselines:
+                continue
+            for baseline_strategy in baselines:
+                if baseline_strategy not in strategies:
                     continue
                 speedups = []
                 for task, baseline_time in strategy_to_task_to_time[baseline_strategy].items():
                     if task in strategy_to_task_to_time[strategy]:
                         strat_time = strategy_to_task_to_time[strategy][task]
                         speedups.append(baseline_time / strat_time)
-                avg_speedup = geometric_mean(speedups)
-                f.write(f"{strat_name(strategy)} is {round(avg_speedup, 1)}x faster than {strat_name(baseline_strategy)}\n")
+                if not speedups:
+                    f.write(f"empty dataset: {strat_name(strategy)} vs {strat_name(baseline_strategy)}\n")
+                else:
+                    avg_speedup = geometric_mean(speedups)
+                    f.write(f"{strat_name(strategy)} is {round(avg_speedup, 1)}x faster than {strat_name(baseline_strategy)}\n")
+                
+        f.write("\n\n")
+        for a, b in strat_names.items():
+            if a in strategies:
+                f.write(f"{a} -> {b}\n")
             
 
 
@@ -177,12 +218,15 @@ def stacked_barchart_times(
     # via a dataframe
     plt.clf()
     data = []
+
+    strategy_to_xs_ys = {}
     for strategy, times in sorted(
         strategy_to_times.items(),
-        key=lambda p: list(strat_names.keys()).index(p[0])
+        key=lambda p: list(strat_names.keys()).index(p[0]) if p[0] in strat_names else 999
     ):
         time_points = [0] + times + [60]
         bugs_found = [0] + list(range(1, len(times) + 1)) + [len(times)]
+        strategy_to_xs_ys[strategy] = time_points, bugs_found
         for t, b in zip(time_points, bugs_found):
             data.append({
                 "Time (s)": t,
@@ -205,11 +249,16 @@ def stacked_barchart_times(
     plt.legend(title='Strategy', loc='lower right')
     plt.savefig(f"{image_path}/{case}-med-times.svg")
 
-    with open(f"{image_path}/{case}-med-times.csv", "w") as f:
+    with open(f"{image_path}/{case}-lines.csv", "w") as f:
         tab = '\t'
-        f.write(tab.join(strategy for strategy in strategies))
+        f.write(tab.join(f"{strategy}x\t{strategy}y" for strategy in strategies))
+        cols = []
+        for strategy in strategies:
+            xs, ys = strategy_to_xs_ys[strategy]
+            cols.append(xs)
+            cols.append(ys)
         f.write('\n')
-        for row in zip_longest(*[strategy_to_times[strategy] for strategy in strategies], fillvalue=''):
+        for row in zip_longest(*cols, fillvalue=''):
             f.write(tab.join(map(str, row)))
             f.write('\n')
             # f.write(f"{strategy}\t{tab.join(map(str,times))}\n")

@@ -28,18 +28,34 @@ def collect(results: str):
     # class: bespoke
     "BespokeGenerator",
     "LBespokeGenerator",
-    "LBespokeACEGenerator",
-    "LBespokeApproxConstructorEntropyGenerator",
+    "S_BespokeACELR03Bound10Generator",
+    # "LBespokeACEGenerator",
+    # "LBespokeApproxConstructorEntropyGenerator",
 
     # class: type-based
-    "TypeBasedGenerator",
-    "LDGenerator",
-    "LDEqMightGenerator",
-    "LDEqVarGenerator",
-    "LDEqWellGenerator",
-    "LDStructureMightGenerator",
-    "LDStructureVarGenerator",
-    "LDStructureWellGenerator",
+    # "TypeBasedGenerator",
+    # "LDGenerator",
+    # "LDEqMightGenerator",
+    # "LDEqVarGenerator",
+    # "LDEqWellGenerator",
+    # "LDStructureMightGenerator",
+    # "LDStructureVarGenerator",
+    # "LDStructureWellGenerator",
+# "LSDMayEqBound05Generator",
+# "LSDMayEqBound10Generator",
+# "LSDThinGenerator",
+# "TypeBasedGenerator",
+
+# "LSDThinGenerator",
+# "LDThinInitGenerator",
+# "LDMayStructureBound05Generator",
+# "LDMayStructureBound10Generator",
+# "LDMayEqBound05Generator",
+# "LDMayEqBound10Generator",
+# "LSDMayStructureBound05Generator",
+# "LSDMayStructureBound10Generator",
+# "LSDMayEqBound05Generator",
+# "LSDMayEqBound10Generator",
             ]
             for s in target_strategies:
                 if not any(
@@ -50,7 +66,14 @@ def collect(results: str):
                     print(tool.all_strategies(workload))
                     exit(1)
 
+            SKIP = True
             for strategy in tool.all_strategies(workload):
+                if SKIP and strategy.name not in target_strategies:
+                    print(f"Skipping {strategy.name}")
+            for strategy in tool.all_strategies(workload):
+                if SKIP and strategy.name not in target_strategies:
+                    continue
+
                 for property in tool.all_properties(workload):
                     property = 'test_' + property
                     if tasks_json['tasks'] and property not in tasks_json['tasks'][variant.name]:
@@ -68,7 +91,7 @@ def collect(results: str):
                     cfg = TrialConfig(workload=workload,
                                       strategy=strategy.name,
                                       property=property,
-                                      trials=10,
+                                      trials=5,
                                       timeout=60,
                                       short_circuit=False)
                     run_trial(cfg)

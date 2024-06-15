@@ -1,15 +1,9 @@
 -Q . BST
 Src/Impl.v
 Src/Spec.v
-Strategies/LEqGenerator.v
-Strategies/LGenerator.v
-Strategies/LExceptGenerator.v
-Strategies/TBEqGenerator.v
-Strategies/TBExceptGenerator.v
+Strategies/B_LDEqLR30Bound10Generator.v
+Strategies/B_LDGenerator.v
 Strategies/TypeBasedGenerator.v
-Runners/LEqGenerator_test_runner.v
-Runners/LGenerator_test_runner.v
-Runners/LExceptGenerator_test_runner.v
-Runners/TBEqGenerator_test_runner.v
-Runners/TBExceptGenerator_test_runner.v
+Runners/B_LDEqLR30Bound10Generator_test_runner.v
+Runners/B_LDGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v

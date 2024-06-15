@@ -1,0 +1,7 @@
+OTBG tuned for diverse valid RBTs (bound=0.1) is 2.3x faster than QuickChick type-based generator
+OTBG tuned for diverse valid RBTs (bound=0.1) is 8.0x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDInitGenerator -> Our type-based generator (OTBG)
+R_LSDEqBound10Generator -> OTBG tuned for diverse valid RBTs (bound=0.1)

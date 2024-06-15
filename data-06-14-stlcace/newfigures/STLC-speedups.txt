@@ -1,0 +1,7 @@
+OBG tuned for approx. constructor entropy (bound=0.1) is 2.0x faster than Our bespoke generator with fixed init. sizes (OBG)
+OBG tuned for approx. constructor entropy (bound=0.1) is 3.1x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator
+LBespokeGenerator -> Our bespoke generator with fixed init. sizes (OBG)
+S_BespokeACELR03Bound10Generator -> OBG tuned for approx. constructor entropy (bound=0.1)

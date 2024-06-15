@@ -1,0 +1,2 @@
+OTBG tuned for diverse (w.r.t. default equality) valid RBTs (bound=0.05) is 4.2x faster than QuickChick type-based generator
+OTBG tuned for diverse (w.r.t. default equality) valid RBTs (bound=0.05) is 14.7x faster than Our type-based generator (OTBG)

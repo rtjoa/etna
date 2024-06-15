@@ -76,6 +76,8 @@ collectrbtnew:
 	python3 qc-checker.py use_new_qc
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/bstnew
+	timeout 3 python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew || true
+	(cd /space/tjoa/etna/workloads/Coq/RBT/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew
 
 analyzerbtnew:

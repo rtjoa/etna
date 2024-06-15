@@ -27,21 +27,26 @@ def collect(results: str):
             run_trial = None
 
             target_strategies = [
-    "BespokeGenerator",
-    "TypeBasedGenerator",
-    "ManualTypeBased5Generator",
-    "ManualTypeBased5bGenerator",
-    "atrained_Generator",
-    "ctrained_Generator",
-    "ftrained_Generator",
-    "fine_consider_1Generator",
-    "fine_ignore_1Generator",
-    "fine_consider_2Generator",
-    "fine_ignore_2Generator",
-    "uniformish_ignoreGenerator",
-    "uniformish_considerGenerator",
-    "uniform_considerGenerator",
-    "uniform_ignoreGenerator",
+                "R_LSDEqLR30Sz6Bound10Generator",
+                "R_LSDEqLR30Sz8Bound10Generator",
+                "RLSD6Generator",
+                "RLSD8Generator",
+                "TypeBasedGenerator",
+    # "BespokeGenerator",
+    # "TypeBasedGenerator",
+    # "ManualTypeBased5Generator",
+    # "ManualTypeBased5bGenerator",
+    # "atrained_Generator",
+    # "ctrained_Generator",
+    # "ftrained_Generator",
+    # "fine_consider_1Generator",
+    # "fine_ignore_1Generator",
+    # "fine_consider_2Generator",
+    # "fine_ignore_2Generator",
+    # "uniformish_ignoreGenerator",
+    # "uniformish_considerGenerator",
+    # "uniform_considerGenerator",
+    # "uniform_ignoreGenerator",
                 ]
             for s in target_strategies:
                 if not any(
@@ -73,9 +78,9 @@ def collect(results: str):
                     cfg = TrialConfig(workload=workload,
                                       strategy=strategy.name,
                                       property=property,
-                                      trials=10,
+                                      trials=5,
                                       timeout=60,
-                                      short_circuit=True)
+                                      short_circuit=False)
                     run_trial(cfg)
 
 
