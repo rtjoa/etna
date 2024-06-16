@@ -55,7 +55,7 @@ collectnew:
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/new
 	timeout 3 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
-	(cd /space/tjoa/etna/workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
+	(cd workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new
 
 analyzenew:
@@ -66,7 +66,7 @@ collectbstnew:
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/bstnew
 	timeout 3 python3 experiments/coq-experiments/bstnew/Collect.py --data=$(DATA)/bstnew || true
-	(cd /space/tjoa/etna/workloads/Coq/BST/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
+	(cd workloads/Coq/BST/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/bstnew/Collect.py --data=$(DATA)/bstnew 
 
 analyzebstnew:
@@ -77,7 +77,7 @@ collectrbtnew:
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/bstnew
 	timeout 3 python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew || true
-	(cd /space/tjoa/etna/workloads/Coq/RBT/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
+	(cd workloads/Coq/RBT/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew
 
 analyzerbtnew:
