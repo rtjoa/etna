@@ -26,13 +26,21 @@ def collect(results: str):
 
             target_strategies = [
     # class: bespoke
-    "BespokeGenerator",
-    "LBespokeGenerator",
-    "S_BespokeACELR03Bound10Generator",
+    # "BespokeGenerator",
+    # "LBespokeGenerator",
+    # "S_BespokeACELR03Bound10Generator",
     # "LBespokeACEGenerator",
     # "LBespokeApproxConstructorEntropyGenerator",
 
     # class: type-based
+"TypeBasedGenerator",
+"LSDThinGenerator",
+# "SLDThinEqWellLR30Bound10Generator",
+# "SLSDThinEqWellLR30Bound10Generator",
+"SLSDThinEqWellLR30Epochs700Bound10SPB200Generator",                                                                        
+"SLSDThinEqWellLR30Epochs500Bound10SPB200Generator",                                                                        
+"SLSDThinEqWellLR30Epochs700Bound10SPB50Generator",           
+"SLSDThinEqWellLR30Epochs500Bound10SPB50Generator",           
     # "TypeBasedGenerator",
     # "LDGenerator",
     # "LDEqMightGenerator",

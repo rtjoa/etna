@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "ParentsEntropyInvariants0_20Generator", "mutant": "swap_ad", "passed": 0, "property": "test_prop_DeleteDelete", "time": 60}]

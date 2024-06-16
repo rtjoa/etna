@@ -81,7 +81,7 @@ collectrbtnew:
 	python3 experiments/coq-experiments/rbtnew/Collect.py --data=$(DATA)/rbtnew
 
 analyzerbtnew:
-	python3 experiments/coq-experiments/rbtnew/Analysis.py --data=$(DATA)/rbtnew --figures=$(FIGURES)
+	python3 experiments/coq-experiments/rbtnew/Analysis.py --data=$(DATA)/rbtnew --figures=$(DATA)/rbtnewfigures
 
 collectifcnew:
 	python3 qc-checker.py use_new_qc

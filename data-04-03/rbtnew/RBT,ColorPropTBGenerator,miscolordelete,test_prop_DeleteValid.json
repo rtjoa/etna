@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 4, "foundbug": true, "strategy": "ColorPropTBGenerator", "mutant": "miscolordelete", "passed": 17, "property": "test_prop_DeleteValid", "time": 0.0006850000000000001}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "ColorPropTBGenerator", "mutant": "miscolordelete", "passed": 0, "property": "test_prop_DeleteValid", "time": 60}]

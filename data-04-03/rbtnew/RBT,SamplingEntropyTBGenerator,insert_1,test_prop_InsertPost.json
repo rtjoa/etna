@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "SamplingEntropyTBGenerator", "mutant": "insert_1", "passed": 0, "property": "test_prop_InsertPost", "time": 60}]

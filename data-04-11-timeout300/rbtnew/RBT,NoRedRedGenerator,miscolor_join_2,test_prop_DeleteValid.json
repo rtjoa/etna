@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "NoRedRedGenerator", "mutant": "miscolor_join_2", "passed": 0, "property": "test_prop_DeleteValid", "time": 300}]

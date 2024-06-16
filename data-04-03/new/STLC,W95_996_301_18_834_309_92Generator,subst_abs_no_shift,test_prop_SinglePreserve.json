@@ -1,1 +1,0 @@
-[{"workload": "STLC", "discards": 0, "foundbug": false, "strategy": "W95_996_301_18_834_309_92Generator", "mutant": "subst_abs_no_shift", "passed": 0, "property": "test_prop_SinglePreserve", "time": 60}]

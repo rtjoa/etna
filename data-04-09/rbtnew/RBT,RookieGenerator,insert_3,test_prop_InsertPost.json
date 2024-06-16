@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 66918, "foundbug": true, "strategy": "RookieGenerator", "mutant": "insert_3", "passed": 8373, "property": "test_prop_InsertPost", "time": 31.906544000000004}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "RookieGenerator", "mutant": "insert_3", "passed": 0, "property": "test_prop_InsertPost", "time": 60}]

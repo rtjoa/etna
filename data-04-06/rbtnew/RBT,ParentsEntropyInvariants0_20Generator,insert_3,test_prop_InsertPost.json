@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "ParentsEntropyInvariants0_20Generator", "mutant": "insert_3", "passed": 0, "property": "test_prop_InsertPost", "time": 60}]

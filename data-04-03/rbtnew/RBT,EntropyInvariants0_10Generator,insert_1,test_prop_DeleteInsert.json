@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": true, "strategy": "EntropyInvariants0_10Generator", "mutant": "insert_1", "passed": 2, "property": "test_prop_DeleteInsert", "time": 0.00085}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "EntropyInvariants0_10Generator", "mutant": "insert_1", "passed": 0, "property": "test_prop_DeleteInsert", "time": 60}]

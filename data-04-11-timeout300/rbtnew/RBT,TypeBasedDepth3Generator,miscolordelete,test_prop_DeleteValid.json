@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "TypeBasedDepth3Generator", "mutant": "miscolordelete", "passed": 0, "property": "test_prop_DeleteValid", "time": 300}]
