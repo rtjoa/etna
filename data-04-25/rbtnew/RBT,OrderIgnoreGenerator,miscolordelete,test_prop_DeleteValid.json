@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 704722, "foundbug": true, "strategy": "OrderIgnoreGenerator", "mutant": "miscolordelete", "passed": 422887, "property": "test_prop_DeleteValid", "time": 53.116572}, {"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "OrderIgnoreGenerator", "mutant": "miscolordelete", "passed": 0, "property": "test_prop_DeleteValid", "time": 60}]

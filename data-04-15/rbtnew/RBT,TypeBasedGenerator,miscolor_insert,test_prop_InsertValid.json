@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "TypeBasedGenerator", "mutant": "miscolor_insert", "passed": 0, "property": "test_prop_InsertValid", "time": 60}]

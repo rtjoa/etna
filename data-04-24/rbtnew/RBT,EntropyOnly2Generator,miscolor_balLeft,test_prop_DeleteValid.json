@@ -1,1 +1,0 @@
-[{"workload": "RBT", "discards": 0, "foundbug": false, "strategy": "EntropyOnly2Generator", "mutant": "miscolor_balLeft", "passed": 0, "property": "test_prop_DeleteValid", "time": 60}]
