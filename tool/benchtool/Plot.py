@@ -85,26 +85,27 @@ def stacked_barchart_times(
         if strategy not in strategies:
             continue
         times = []
+
+        max_trials = max(len(df_task) for (_, df_task) in df_strat.groupby('task'))
+        assert max_trials == 5
+        assert max_trials % 2 == 1
+        num_needed = max_trials // 2 + 1
+
         for (task, df_task) in df_strat.groupby('task'):
             import code
-            assert len(df_task) == 5 # remove if we add short circuiting
-            if len(df_task) % 2 == 0:
-                df_task = df_task[:-1]
 
-            num_trials = len(df_task)
-            assert num_trials % 2, "num trials must be odd"
-
-            majority_found = df_task.foundbug.sum() * 2 > num_trials
+            majority_found = df_task.foundbug.sum() >= num_needed
             # if df_task.foundbug.sum() not in [0, 5]:
             #     code.interact(local=locals())
             # if df_task.foundbug.all():
             if majority_found:
-                # use nsmallest(num_tasks // 2 + 1) like so if we have short circuiting:
-                # pd.Series([50, 40, 10, 30]).nsmallest(3).iloc[-1]
-                t = df_task.time.median()
+                # t = df_task.time.median() # only valid w/o short circuiting
+                t = df_task.time.nsmallest(num_needed).iloc[-1]
                 assert t != 60
                 times.append(t)
                 strategy_to_task_to_time[strategy][task] = t
+            else:
+                print(f"{strategy} failed {task} {df_task.foundbug.sum()}")
         times.sort()
         strategy_to_times[strategy] = times
 
@@ -154,6 +155,7 @@ def stacked_barchart_times(
         "LSDGenerator",
         "LSDThinGenerator",
         "B_LDGenerator",
+        "RLSDThinSmallGenerator",
     ]
     with open(f"{image_path}/{case}-speedups.txt", "w") as f:
         for strategy in strategies:

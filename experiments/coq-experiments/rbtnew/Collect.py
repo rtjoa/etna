@@ -27,10 +27,8 @@ def collect(results: str):
             run_trial = None
 
             target_strategies = [
-                "R_LSDEqLR30Sz6Bound10Generator",
-                "R_LSDEqLR30Sz8Bound10Generator",
-                "RLSD6Generator",
-                "RLSD8Generator",
+                "RLSDThinSmallGenerator",
+                "RLSDThinEqSmallGenerator",
                 "TypeBasedGenerator",
     # "BespokeGenerator",
     # "TypeBasedGenerator",

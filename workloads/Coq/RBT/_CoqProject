@@ -1,13 +1,9 @@
 -Q . RBT
 Src/Impl.v
 Src/Spec.v
-Strategies/R_LSDEqLR30Sz8Bound10Generator.v
-Strategies/RLSD8Generator.v
-Strategies/RLSD6Generator.v
-Strategies/R_LSDEqLR30Sz6Bound10Generator.v
+Strategies/RLSDThinEqSmallGenerator.v
+Strategies/RLSDThinSmallGenerator.v
 Strategies/TypeBasedGenerator.v
-Runners/R_LSDEqLR30Sz8Bound10Generator_test_runner.v
-Runners/RLSD8Generator_test_runner.v
-Runners/RLSD6Generator_test_runner.v
-Runners/R_LSDEqLR30Sz6Bound10Generator_test_runner.v
+Runners/RLSDThinEqSmallGenerator_test_runner.v
+Runners/RLSDThinSmallGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v

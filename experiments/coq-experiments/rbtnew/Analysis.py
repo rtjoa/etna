@@ -26,11 +26,13 @@ def analyze(results: str, images: str):
     # colors = list(reversed(colors))
 
     strategies = [
+                # baseline
                 "TypeBasedGenerator",
-                "R_LSDEqLR30Sz6Bound10Generator",
-                "R_LSDEqLR30Sz8Bound10Generator",
-                "RLSD6Generator",
-                "RLSD8Generator",
+                # our best trained/untrained
+                # "LSDInitGenerator",
+                # "R_LSDEqBound10Generator",
+                "RLSDThinSmallGenerator",
+                "RLSDThinEqSmallGenerator",
         ]
 
     for workload in ['RBT']:
