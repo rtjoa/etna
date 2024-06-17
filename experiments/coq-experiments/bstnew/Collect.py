@@ -26,8 +26,8 @@ def collect(results: str):
 
             target_strategies = [
         "TypeBasedGenerator",
-        "B_LDEqLR30Bound10Generator",
-        "B_LDGenerator",
+        "BSmallInitGenerator",
+        "BSmallTrainedGenerator",
             ]
             for s in target_strategies:
                 if not any(

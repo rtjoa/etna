@@ -154,7 +154,7 @@ def stacked_barchart_times(
         "LSDInitGenerator",
         "LSDGenerator",
         "LSDThinGenerator",
-        "B_LDGenerator",
+        "BSmallInitGenerator",
         "RLSDThinSmallGenerator",
     ]
     with open(f"{image_path}/{case}-speedups.txt", "w") as f:

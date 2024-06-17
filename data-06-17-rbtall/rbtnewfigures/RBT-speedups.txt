@@ -1,0 +1,5 @@
+RLSDThinEqSmallGenerator is 4.5x faster than QuickChick type-based generator
+RLSDThinEqSmallGenerator is 5.7x faster than RLSDThinSmallGenerator
+
+
+TypeBasedGenerator -> QuickChick type-based generator

@@ -1,9 +1,9 @@
 -Q . BST
 Src/Impl.v
 Src/Spec.v
-Strategies/B_LDEqLR30Bound10Generator.v
-Strategies/B_LDGenerator.v
+Strategies/BSmallInitGenerator.v
+Strategies/BSmallTrainedGenerator.v
 Strategies/TypeBasedGenerator.v
-Runners/B_LDEqLR30Bound10Generator_test_runner.v
-Runners/B_LDGenerator_test_runner.v
+Runners/BSmallInitGenerator_test_runner.v
+Runners/BSmallTrainedGenerator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v
