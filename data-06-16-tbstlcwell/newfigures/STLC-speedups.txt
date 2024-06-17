@@ -1,0 +1,6 @@
+SLSDThinEqWellLR30Bound10Generator is 6.3x faster than QuickChick type-based generator
+SLSDThinEqWellLR30Bound10Generator is 2.8x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)
