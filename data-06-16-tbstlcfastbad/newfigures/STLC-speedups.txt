@@ -1,0 +1,12 @@
+SLSDThinEqWellLR30Epochs700Bound10SPB200Generator is 2.4x faster than QuickChick type-based generator
+SLSDThinEqWellLR30Epochs700Bound10SPB200Generator is 1.3x faster than Our type-based generator (OTBG)
+SLSDThinEqWellLR30Epochs500Bound10SPB200Generator is 2.2x faster than QuickChick type-based generator
+SLSDThinEqWellLR30Epochs500Bound10SPB200Generator is 1.2x faster than Our type-based generator (OTBG)
+SLSDThinEqWellLR30Epochs700Bound10SPB50Generator is 2.1x faster than QuickChick type-based generator
+SLSDThinEqWellLR30Epochs700Bound10SPB50Generator is 1.1x faster than Our type-based generator (OTBG)
+SLSDThinEqWellLR30Epochs500Bound10SPB50Generator is 2.5x faster than QuickChick type-based generator
+SLSDThinEqWellLR30Epochs500Bound10SPB50Generator is 1.4x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)

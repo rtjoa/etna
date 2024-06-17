@@ -219,6 +219,10 @@ class Coq(BenchTool):
                     self._log(f"{params.strategy} Result: Timeout", LogLevel.INFO)
 
                 results.append(trial_result)
+                failures = sum(1 for result in results if not result["foundbug"])
+                if failures * 2 > params.trials:
+                    break
+
                 if params.short_circuit and trial_result['time'] == params.timeout:
                     break
 

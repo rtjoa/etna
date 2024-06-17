@@ -20,8 +20,12 @@ def analyze(results: str, images: str):
 
 "TypeBasedGenerator",
 "LSDThinGenerator",
-"SLDThinEqWellLR30Bound10Generator",
+# "SLDThinEqWellLR30Bound10Generator",
 "SLSDThinEqWellLR30Bound10Generator",
+# "SLSDThinEqWellLR30Epochs700Bound10SPB200Generator",                                                                        
+# "SLSDThinEqWellLR30Epochs500Bound10SPB200Generator",                                                                        
+# "SLSDThinEqWellLR30Epochs700Bound10SPB50Generator",           
+# "SLSDThinEqWellLR30Epochs500Bound10SPB50Generator",           
     # class: type-based
     # "TypeBasedGenerator",
     # "LDGenerator",

@@ -1,0 +1,6 @@
+SLSDThinEqWellLR30Epochs500Bound10SPB50Generator	4	11	4	1	0
+SLSDThinEqWellLR30Epochs700Bound10SPB50Generator	4	10	4	2	0
+SLSDThinEqWellLR30Epochs500Bound10SPB200Generator	4	8	5	3	0
+SLSDThinEqWellLR30Epochs700Bound10SPB200Generator	3	11	4	2	0
+LSDThinGenerator	2	10	4	4	0
+TypeBasedGenerator	1	13	2	3	1
