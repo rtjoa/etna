@@ -1,0 +1,5 @@
+BSmallTrainedGenerator is 3.9x faster than QuickChick type-based generator
+BSmallTrainedGenerator is 5.9x faster than BSmallInitGenerator
+
+
+TypeBasedGenerator -> QuickChick type-based generator

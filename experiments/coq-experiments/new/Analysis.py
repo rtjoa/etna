@@ -13,44 +13,15 @@ def analyze(results: str, images: str):
     # Generate task bucket charts used in Figure 3.
 
     strategies = [
+
     # class: bespoke
-    # "BespokeGenerator",
-    # "LBespokeGenerator",
-    # "S_BespokeACELR03Bound10Generator",
+    "BespokeGenerator",
+    "LBespokeGenerator",
+    "SBespokeACELR03Bound10Generator",
 
-"TypeBasedGenerator",
-"LSDThinGenerator",
-# "SLDThinEqWellLR30Bound10Generator",
-"SLSDThinEqWellLR30Bound10Generator",
-# "SLSDThinEqWellLR30Epochs700Bound10SPB200Generator",                                                                        
-# "SLSDThinEqWellLR30Epochs500Bound10SPB200Generator",                                                                        
-# "SLSDThinEqWellLR30Epochs700Bound10SPB50Generator",           
-# "SLSDThinEqWellLR30Epochs500Bound10SPB50Generator",           
-    # class: type-based
     # "TypeBasedGenerator",
-    # "LDGenerator",
-    # "LDEqMightGenerator",
-    # "LDEqVarGenerator",
-    # "LDEqWellGenerator",
-    # "LDStructureMightGenerator",
-    # "LDStructureVarGenerator",
-    # "LDStructureWellGenerator",
-# "LDThinInitGenerator",
-# "LSDThinGenerator",
-# "LDMayStructureBound05Generator",
-# "LDMayStructureBound10Generator",
-# "LDMayEqBound05Generator",
-# "LDMayEqBound10Generator",
-# "LSDMayStructureBound05Generator",
-# "LSDMayStructureBound10Generator",
-# "LSDMayEqBound05Generator",
-# "LSDMayEqBound10Generator",
-
-# "LSDMayEqBound05Generator",
-# "LSDMayEqBound10Generator",
-# "LSDThinGenerator",
-# "TypeBasedGenerator",
-
+    # "LSDThinGenerator",
+    # "SLSDThinEqWellLR30Bound10Generator",
     ]
     for workload in ['STLC']:
         times = partial(stacked_barchart_times, case=workload, df=df)

@@ -28,9 +28,6 @@ def analyze(results: str, images: str):
     strategies = [
                 # baseline
                 "TypeBasedGenerator",
-                # our best trained/untrained
-                # "LSDInitGenerator",
-                # "R_LSDEqBound10Generator",
                 "RLSDThinSmallGenerator",
                 "RLSDThinEqSmallGenerator",
         ]

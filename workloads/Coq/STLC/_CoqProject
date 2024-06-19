@@ -1,9 +1,15 @@
 -Q . STLC
 Src/Impl.v
 Src/Spec.v
+Strategies/BespokeGenerator.v
 Strategies/LSDThinGenerator.v
+Strategies/LBespokeGenerator.v
 Strategies/SLSDThinEqWellLR30Bound10Generator.v
+Strategies/SBespokeACELR03Bound10Generator.v
 Strategies/TypeBasedGenerator.v
+Runners/BespokeGenerator_test_runner.v
 Runners/LSDThinGenerator_test_runner.v
+Runners/LBespokeGenerator_test_runner.v
 Runners/SLSDThinEqWellLR30Bound10Generator_test_runner.v
+Runners/SBespokeACELR03Bound10Generator_test_runner.v
 Runners/TypeBasedGenerator_test_runner.v

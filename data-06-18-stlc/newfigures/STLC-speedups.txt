@@ -1,0 +1,6 @@
+SBespokeACELR03Bound10Generator is 1.7x faster than Our bespoke generator with fixed init. sizes (OBG)
+SBespokeACELR03Bound10Generator is 2.5x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator
+LBespokeGenerator -> Our bespoke generator with fixed init. sizes (OBG)

@@ -37,7 +37,14 @@ def collect(results: str):
                     print(f"Missing strategy {s}")
                     print(tool.all_strategies(workload))
                     exit(1)
+
+            SKIP = True
             for strategy in tool.all_strategies(workload):
+                if SKIP and strategy.name not in target_strategies:
+                    print(f"Skipping {strategy.name}")
+            for strategy in tool.all_strategies(workload):
+                if SKIP and strategy.name not in target_strategies:
+                    continue
 
                 for property in tool.all_properties(workload):
                     property = 'test_' + property
@@ -56,7 +63,7 @@ def collect(results: str):
                     cfg = TrialConfig(workload=workload,
                                       strategy=strategy.name,
                                       property=property,
-                                      trials=5,
+                                      trials=11,
                                       timeout=60,
                                       short_circuit=False)
                     run_trial(cfg)

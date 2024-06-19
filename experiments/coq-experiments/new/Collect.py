@@ -26,44 +26,14 @@ def collect(results: str):
 
             target_strategies = [
     # class: bespoke
-    # "BespokeGenerator",
-    # "LBespokeGenerator",
-    # "S_BespokeACELR03Bound10Generator",
-    # "LBespokeACEGenerator",
-    # "LBespokeApproxConstructorEntropyGenerator",
+    "BespokeGenerator",
+    "LBespokeGenerator",
+    "SBespokeACELR03Bound10Generator",
 
     # class: type-based
-"TypeBasedGenerator",
-"LSDThinGenerator",
-# "SLDThinEqWellLR30Bound10Generator",
-"SLSDThinEqWellLR30Bound10Generator",
-# "SLSDThinEqWellLR30Epochs700Bound10SPB200Generator",                                                                        
-# "SLSDThinEqWellLR30Epochs500Bound10SPB200Generator",                                                                        
-# "SLSDThinEqWellLR30Epochs700Bound10SPB50Generator",           
-# "SLSDThinEqWellLR30Epochs500Bound10SPB50Generator",           
-    # "TypeBasedGenerator",
-    # "LDGenerator",
-    # "LDEqMightGenerator",
-    # "LDEqVarGenerator",
-    # "LDEqWellGenerator",
-    # "LDStructureMightGenerator",
-    # "LDStructureVarGenerator",
-    # "LDStructureWellGenerator",
-# "LSDMayEqBound05Generator",
-# "LSDMayEqBound10Generator",
-# "LSDThinGenerator",
-# "TypeBasedGenerator",
-
-# "LSDThinGenerator",
-# "LDThinInitGenerator",
-# "LDMayStructureBound05Generator",
-# "LDMayStructureBound10Generator",
-# "LDMayEqBound05Generator",
-# "LDMayEqBound10Generator",
-# "LSDMayStructureBound05Generator",
-# "LSDMayStructureBound10Generator",
-# "LSDMayEqBound05Generator",
-# "LSDMayEqBound10Generator",
+    "TypeBasedGenerator",
+    "LSDThinGenerator",
+    "SLSDThinEqWellLR30Bound10Generator",
             ]
             for s in target_strategies:
                 if not any(
@@ -99,7 +69,7 @@ def collect(results: str):
                     cfg = TrialConfig(workload=workload,
                                       strategy=strategy.name,
                                       property=property,
-                                      trials=5,
+                                      trials=11,
                                       timeout=60,
                                       short_circuit=False)
                     run_trial(cfg)
