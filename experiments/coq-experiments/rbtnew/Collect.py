@@ -27,9 +27,9 @@ def collect(results: str):
             run_trial = None
 
             target_strategies = [
+                "TypeBasedGenerator",
                 "RLSDThinSmallGenerator",
                 "RLSDThinEqSmallGenerator",
-                "TypeBasedGenerator",
                 ]
             for s in target_strategies:
                 if not any(
