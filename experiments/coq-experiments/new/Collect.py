@@ -25,15 +25,24 @@ def collect(results: str):
             run_trial = None
 
             target_strategies = [
-    # class: bespoke
+
+    # "BespokeGenerator",
+    # "B51Generator",
+    # "B51AceGenerator",
+    # "B51SEGenerator",
+    # "MoreSamplesGenerator",
+    # "MoreEpochsGenerator",
+
+    # # class: bespoke
     "BespokeGenerator",
     "LBespokeGenerator",
-    "SBespokeACELR03Bound10Generator",
+    "SimplerACEGenerator"
+    # "SBespokeACELR03Bound10Generator",
 
-    # class: type-based
-    "TypeBasedGenerator",
-    "LSDThinGenerator",
-    "SLSDThinEqWellLR30Bound10Generator",
+    # # class: type-based
+    # "TypeBasedGenerator",
+    # "LSDThinGenerator",
+    # "SLSDThinEqWellLR30Bound10Generator",
             ]
             for s in target_strategies:
                 if not any(
@@ -79,6 +88,8 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('--data', help='path to folder for JSON data')
     args = p.parse_args()
+
+    print(f"CWD: {os.getcwd()}")
 
     results_path = f'{os.getcwd()}/{args.data}'
     collect(results_path)

@@ -14,10 +14,14 @@ def analyze(results: str, images: str):
 
     strategies = [
 
-    # class: bespoke
     "BespokeGenerator",
     "LBespokeGenerator",
-    "SBespokeACELR03Bound10Generator",
+    "SimplerACEGenerator"
+
+    # class: bespoke
+    # "BespokeGenerator",
+    # "LBespokeGenerator",
+    # "SBespokeACELR02Bound10Generator",
 
     # "TypeBasedGenerator",
     # "LSDThinGenerator",

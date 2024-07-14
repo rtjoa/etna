@@ -1,0 +1,8 @@
+B51Generator is 1.4x faster than Bespoke generator
+B51AceGenerator is 2.2x faster than Bespoke generator
+B51SEGenerator is 0.1x faster than Bespoke generator
+MoreSamplesGenerator is 0.1x faster than Bespoke generator
+MoreEpochsGenerator is 0.1x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator

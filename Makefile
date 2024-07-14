@@ -50,13 +50,15 @@ collect5.1:
 analyze5.1:
 	python3 experiments/coq-experiments/5.1/Analysis.py --data=$(DATA)/5.1 --figures=$(FIGURES)/fig3
 
+# tmp:
 collectnew:
 	python3 qc-checker.py use_new_qc
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/new
-	timeout 3 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
+	timeout 10 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
 	(cd workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new
+# tmp:
 
 analyzenew:
 	python3 experiments/coq-experiments/new/Analysis.py --data=$(DATA)/new --figures=$(DATA)/newfigures
