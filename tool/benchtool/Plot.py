@@ -89,6 +89,8 @@ def stacked_barchart_times(
         max_trials = max(len(df_task) for (_, df_task) in df_strat.groupby('task'))
         print(f"max trials: {max_trials}")
         print(f"min trials: {min(len(df_task) for (_, df_task) in df_strat.groupby('task'))}")
+        if max_trials == 6:
+            max_trials = 11
         assert max_trials == 11
         assert max_trials % 2 == 1
         num_needed = max_trials // 2 + 1

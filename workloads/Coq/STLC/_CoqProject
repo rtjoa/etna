@@ -1,9 +1,17 @@
 -Q . STLC
 Src/Impl.v
 Src/Spec.v
+Strategies/SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator.v
 Strategies/BespokeGenerator.v
 Strategies/LBespokeGenerator.v
+Strategies/TypeBasedGenerator.v
 Strategies/SimplerACEGenerator.v
+Strategies/LSDThinGenerator.v
+Strategies/SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator.v
+Runners/SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator_test_runner.v
 Runners/BespokeGenerator_test_runner.v
 Runners/LBespokeGenerator_test_runner.v
+Runners/TypeBasedGenerator_test_runner.v
 Runners/SimplerACEGenerator_test_runner.v
+Runners/LSDThinGenerator_test_runner.v
+Runners/SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator_test_runner.v

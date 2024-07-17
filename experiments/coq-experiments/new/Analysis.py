@@ -14,17 +14,15 @@ def analyze(results: str, images: str):
 
     strategies = [
 
-    "BespokeGenerator",
-    "LBespokeGenerator",
-    "SimplerACEGenerator"
-
     # class: bespoke
     # "BespokeGenerator",
     # "LBespokeGenerator",
-    # "SBespokeACELR02Bound10Generator",
+    # "SimplerACEGenerator"
 
-    # "TypeBasedGenerator",
-    # "LSDThinGenerator",
+    "TypeBasedGenerator",
+    "LSDThinGenerator",
+    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator",
+    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator",
     # "SLSDThinEqWellLR30Bound10Generator",
     ]
     for workload in ['STLC']:

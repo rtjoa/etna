@@ -46,6 +46,7 @@ class Coq(BenchTool):
         fuzzers = self._get_fuzzer_names(workload_path)
         fuzzer_build_commands = map(lambda fuzzer: self._get_fuzzer_build_command(fuzzer), fuzzers)
         with self._change_dir(workload_path):
+            self._shell_command(['make', 'clean'])
             self._shell_command(['coq_makefile', '-f', '_CoqProject', '-o', 'Makefile'])
             self._shell_command(['make', 'clean'])
             self._shell_command(['make'])

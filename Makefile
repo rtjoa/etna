@@ -55,10 +55,10 @@ collectnew:
 	python3 qc-checker.py use_new_qc
 	python3 bounds-switch.py to_max
 	mkdir -p $(DATA)/new
-	timeout 10 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
-	(cd workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 	python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new
 # tmp:
+# timeout 15 python3 experiments/coq-experiments/new/Collect.py --data=$(DATA)/new || true
+# (cd workloads/Coq/STLC/ && make clean && coq_makefile -f _CoqProject -o Makefile && make)
 
 analyzenew:
 	python3 experiments/coq-experiments/new/Analysis.py --data=$(DATA)/new --figures=$(DATA)/newfigures
