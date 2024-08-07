@@ -1,0 +1,8 @@
+empty dataset: SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator vs QuickChick type-based generator
+empty dataset: SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator vs Our type-based generator (OTBG)
+empty dataset: SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator vs QuickChick type-based generator
+empty dataset: SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator vs Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)

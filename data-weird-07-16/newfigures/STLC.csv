@@ -1,0 +1,4 @@
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator	4	9	3	4	0
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator	3	13	2	2	0
+TypeBasedGenerator	0	0	0	0	20
+LSDThinGenerator	0	0	0	0	20

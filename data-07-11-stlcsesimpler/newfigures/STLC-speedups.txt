@@ -1,0 +1,6 @@
+SimplerACEGenerator is 1.5x faster than Our bespoke generator with fixed init. sizes (OBG)
+SimplerACEGenerator is 2.2x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator
+LBespokeGenerator -> Our bespoke generator with fixed init. sizes (OBG)
