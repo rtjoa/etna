@@ -120,27 +120,27 @@ def stacked_barchart_times(
     )
     max_found = max(len(times) for times in strategy_to_times.values())
     strat_names = {
-        "BespokeGenerator": "Bespoke generator",
-        "LBespokeGenerator": "Our bespoke generator with fixed init. sizes (OBG)",
-        "LBespokeApproxConstructorEntropyGenerator": "OBG tuned for approx. constructor entropy",
-        "LBespokeACEGenerator": "OBG test tuning",
-        "S_BespokeACELR03Bound10Generator": "OBG tuned for approx. constructor entropy (bound=0.1)",
+        # "BespokeGenerator": "Bespoke generator",
+        # "LBespokeGenerator": "Our bespoke generator with fixed init. sizes (OBG)",
+        # "LBespokeApproxConstructorEntropyGenerator": "OBG tuned for approx. constructor entropy",
+        # "LBespokeACEGenerator": "OBG test tuning",
+        # "S_BespokeACELR03Bound10Generator": "OBG tuned for approx. constructor entropy (bound=0.1)",
 
-        "TypeBasedGenerator": "QuickChick type-based generator",
-        "LGenerator": "Our type-based generator (OTBG)",
-        "LEqGenerator": "OTBG tuned for diverse (w.r.t default equality) valid BSTs",
-        "LExceptGenerator": "OTBG tuned for diverse (w.r.t. BST structure) valid BSTs",
+        # "TypeBasedGenerator": "QuickChick type-based generator",
+        # "LGenerator": "Our type-based generator (OTBG)",
+        # "LEqGenerator": "OTBG tuned for diverse (w.r.t default equality) valid BSTs",
+        # "LExceptGenerator": "OTBG tuned for diverse (w.r.t. BST structure) valid BSTs",
 
 
-        "LSDInitGenerator" : "Our type-based generator (OTBG)",
-        "R_LSDEqBound05Generator": "OTBG tuned for diverse (w.r.t. default equality) valid RBTs (bound=0.05)",
-        "R_LSDEqBound10Generator": "OTBG tuned for diverse valid RBTs (bound=0.1)",
+        # "LSDInitGenerator" : "Our type-based generator (OTBG)",
+        # "R_LSDEqBound05Generator": "OTBG tuned for diverse (w.r.t. default equality) valid RBTs (bound=0.05)",
+        # "R_LSDEqBound10Generator": "OTBG tuned for diverse valid RBTs (bound=0.1)",
 
-        "LSDThinGenerator": "Our type-based generator (OTBG)",
-        "LSDMayEqBound10Generator": "OTBG tuned for diverse samples",
+        # "LSDThinGenerator": "Our type-based generator (OTBG)",
+        # "LSDMayEqBound10Generator": "OTBG tuned for diverse samples",
 
-        "B_LDGenerator": "Our type-based generator (OTBG)",
-        "B_LDEqLR30Bound10Generator": "OTBG tuned for diverse valid BSTs (bound=0.1)",
+        # "B_LDGenerator": "Our type-based generator (OTBG)",
+        # "B_LDEqLR30Bound10Generator": "OTBG tuned for diverse valid BSTs (bound=0.1)",
 
 
 # "LDThinInitGenerator": "",
@@ -152,14 +152,11 @@ def stacked_barchart_times(
 
     baselines = [
         "TypeBasedGenerator",
-        "LGenerator",
         "LBespokeGenerator",
         "BespokeGenerator",
-        "LSDInitGenerator",
-        "LSDGenerator",
-        "LSDThinGenerator",
-        "BSmallInitGenerator",
-        "RLSDThinSmallGenerator",
+        "SLSDThinGenerator",
+        "RLSDThinGenerator",
+        "BLSDThinGenerator",
     ]
     with open(f"{image_path}/{case}-speedups.txt", "w") as f:
         for strategy in strategies:

@@ -17,13 +17,14 @@ def analyze(results: str, images: str):
     # class: bespoke
     # "BespokeGenerator",
     # "LBespokeGenerator",
-    # "SimplerACEGenerator"
+    # "SBespokeMLENumAppsTarget4321LR1Epochs250Generator",
 
+# TB
     "TypeBasedGenerator",
-    "LSDThinGenerator",
-    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator",
-    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator",
-    # "SLSDThinEqWellLR30Bound10Generator",
+    "SLSDThinGenerator",
+    "SLSDThinSEFreq2SPB200WellTypedLR30Epochs2000Bound10Generator",
+
+
     ]
     for workload in ['STLC']:
         times = partial(stacked_barchart_times, case=workload, df=df)

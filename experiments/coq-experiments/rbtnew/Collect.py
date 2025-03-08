@@ -28,8 +28,8 @@ def collect(results: str):
 
             target_strategies = [
                 "TypeBasedGenerator",
-                "RLSDThinSmallGenerator",
-                "RLSDThinEqSmallGenerator",
+                "RLSDThinGenerator",
+                "RLSDThinSEFreq2SPB200IsRBTLR30Epochs2000Bound10Generator",
                 ]
             for s in target_strategies:
                 if not any(

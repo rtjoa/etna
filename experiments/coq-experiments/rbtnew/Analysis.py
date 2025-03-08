@@ -28,8 +28,8 @@ def analyze(results: str, images: str):
     strategies = [
                 # baseline
                 "TypeBasedGenerator",
-                "RLSDThinSmallGenerator",
-                "RLSDThinEqSmallGenerator",
+                "RLSDThinGenerator",
+                "RLSDThinSEFreq2SPB200IsRBTLR30Epochs2000Bound10Generator",
         ]
 
     for workload in ['RBT']:

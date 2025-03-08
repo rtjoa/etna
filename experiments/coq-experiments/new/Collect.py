@@ -36,14 +36,12 @@ def collect(results: str):
     # class: bespoke
     # "BespokeGenerator",
     # "LBespokeGenerator",
-    # "SimplerACEGenerator"
+    # "SBespokeMLENumAppsTarget4321LR1Epochs250Generator",
 
     # class: type-based
     "TypeBasedGenerator",
-    "LSDThinGenerator",
-    # "SLSDThinEqWellLR30Bound10Generator",
-    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator",
-    "SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator",
+    "SLSDThinGenerator",
+    "SLSDThinSEFreq2SPB200WellTypedLR30Epochs2000Bound10Generator",
             ]
             for s in target_strategies:
                 if not any(

@@ -62,6 +62,7 @@ collectnew:
 
 analyzenew:
 	python3 experiments/coq-experiments/new/Analysis.py --data=$(DATA)/new --figures=$(DATA)/newfigures
+# python3 experiments/coq-experiments/new/Analysis.py --data=data-02-22-tb-stlc/new --figures=data-02-22-tb-stlc/newfigures
 
 collectbstnew:
 	python3 qc-checker.py use_new_qc

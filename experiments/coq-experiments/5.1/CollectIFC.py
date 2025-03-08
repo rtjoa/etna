@@ -32,8 +32,8 @@ def collect(results: str):
                 if strategy.name not in [
                         'TypeBasedGenerator',
                         'BespokeGenerator',
-                        'TypeBasedFuzzer',
-                        'VariationalFuzzer'  # Only for this workload
+                        # 'TypeBasedFuzzer',
+                        # 'VariationalFuzzer'  # Only for this workload
                 ]:
                     continue
 
