@@ -95,7 +95,8 @@ def stacked_barchart_times(
         df_strat_foundbug = df_strat[df_strat.foundbug]
         # if df_start_foundbug has a different number of rows than df_strat, then some tasks were not solved
 
-        total_generations = df_strat_foundbug.inputs.sum() + df_strat_foundbug.discards.sum()
+        df_strat_foundbug['total_generations'] = df_strat_foundbug.inputs + df_strat_foundbug.discards
+        total_generations = df_strat_foundbug['total_generations'].sum()
         total_time = df_strat_foundbug.time.sum() * 1000
         print(f"ms per generation: {total_time / total_generations}")
         # assert that no time is 60
