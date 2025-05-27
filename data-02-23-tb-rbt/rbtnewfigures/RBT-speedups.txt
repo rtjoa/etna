@@ -1,0 +1,4 @@
+RLSDThinSEFreq2SPB200IsRBTLR30Epochs2000Bound10Generator is 5.8x faster than TypeBasedGenerator
+RLSDThinSEFreq2SPB200IsRBTLR30Epochs2000Bound10Generator is 7.4x faster than RLSDThinGenerator
+
+

@@ -1,0 +1,4 @@
+SLSDThinSEFreq2SPB200WellTypedLR30Epochs2000Bound10Generator is 4.3x faster than TypeBasedGenerator
+SLSDThinSEFreq2SPB200WellTypedLR30Epochs2000Bound10Generator is 3.1x faster than SLSDThinGenerator
+
+

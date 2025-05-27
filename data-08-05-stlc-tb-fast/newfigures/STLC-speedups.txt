@@ -1,0 +1,8 @@
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator is 2.5x faster than QuickChick type-based generator
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq1SPB50Generator is 1.5x faster than Our type-based generator (OTBG)
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator is 3.4x faster than QuickChick type-based generator
+SLSDStack1ThinEqWellLR30Epochs500Bound10Freq2SPB50Generator is 2.1x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)

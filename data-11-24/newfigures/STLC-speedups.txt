@@ -1,0 +1,6 @@
+STLC10MGenerator is 5.0x faster than QuickChick type-based generator
+STLC10MGenerator is 2.8x faster than Our type-based generator (OTBG)
+
+
+TypeBasedGenerator -> QuickChick type-based generator
+LSDThinGenerator -> Our type-based generator (OTBG)

@@ -1,0 +1,6 @@
+SBespokeMLENumAppsTarget333LR1Epochs1000Generator is 1.2x faster than Our bespoke generator with fixed init. sizes (OBG)
+SBespokeMLENumAppsTarget333LR1Epochs1000Generator is 1.6x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator
+LBespokeGenerator -> Our bespoke generator with fixed init. sizes (OBG)

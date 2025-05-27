@@ -1,0 +1,5 @@
+LSDBSTFastGenerator is 3.7x faster than QuickChick type-based generator
+LSDBSTFastGenerator is 5.0x faster than BSmallInitGenerator
+
+
+TypeBasedGenerator -> QuickChick type-based generator

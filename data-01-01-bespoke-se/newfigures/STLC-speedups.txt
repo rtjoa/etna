@@ -1,0 +1,6 @@
+BespokeSEGenerator is 0.3x faster than Our bespoke generator with fixed init. sizes (OBG)
+BespokeSEGenerator is 0.4x faster than Bespoke generator
+
+
+BespokeGenerator -> Bespoke generator
+LBespokeGenerator -> Our bespoke generator with fixed init. sizes (OBG)

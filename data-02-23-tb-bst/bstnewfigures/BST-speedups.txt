@@ -1,0 +1,4 @@
+BLSDThinSEFreq2SPB200IsBSTLR30Epochs2000Bound10Generator is 3.5x faster than TypeBasedGenerator
+BLSDThinSEFreq2SPB200IsBSTLR30Epochs2000Bound10Generator is 5.4x faster than BLSDThinGenerator
+
+
