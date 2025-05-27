@@ -86,9 +86,20 @@ def stacked_barchart_times(
             continue
         times = []
 
+        print(strategy)
         max_trials = max(len(df_task) for (_, df_task) in df_strat.groupby('task'))
-        print(f"max trials: {max_trials}")
-        print(f"min trials: {min(len(df_task) for (_, df_task) in df_strat.groupby('task'))}")
+        # print(f"max trials: {max_trials}")
+        # print(f"min trials: {min(len(df_task) for (_, df_task) in df_strat.groupby('task'))}")
+
+        # total generations:
+        df_strat_foundbug = df_strat[df_strat.foundbug]
+        # if df_start_foundbug has a different number of rows than df_strat, then some tasks were not solved
+
+        total_generations = df_strat_foundbug.inputs.sum() + df_strat_foundbug.discards.sum()
+        total_time = df_strat_foundbug.time.sum() * 1000
+        print(f"ms per generation: {total_time / total_generations}")
+        # assert that no time is 60
+
         if max_trials == 6:
             max_trials = 11
         assert max_trials == 11
@@ -109,7 +120,8 @@ def stacked_barchart_times(
                 times.append(t)
                 strategy_to_task_to_time[strategy][task] = t
             else:
-                print(f"{strategy} failed {task} {df_task.foundbug.sum()}")
+                pass
+                # print(f"{strategy} failed {task} {df_task.foundbug.sum()}")
         times.sort()
         strategy_to_times[strategy] = times
 

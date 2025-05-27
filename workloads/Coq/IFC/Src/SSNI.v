@@ -17,7 +17,8 @@ Definition is_low_SState st lab := isLow (pc_lab (st_pc st)) lab.
 
 Definition propSSNI_smart (t : table) (v : Variation) : option bool :=
     let '(Var lab st1 st2) := v in
-    if indist lab st1 st2 && well_formed st1 && well_formed st2 then
+    Some (indist lab st1 st2 && well_formed st1 && well_formed st2).
+    (* if indist lab st1 st2 && well_formed st1 && well_formed st2 then
       match fstep t st1  with
       | Some st1' =>
         if is_low_SState st1 lab then
@@ -38,4 +39,4 @@ Definition propSSNI_smart (t : table) (v : Variation) : option bool :=
             Some (indist lab st1 st1' && well_formed st1')
       | _ => None
       end
-    else None.
+    else None. *)

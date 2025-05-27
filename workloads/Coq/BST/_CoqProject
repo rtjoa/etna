@@ -1,9 +1,9 @@
 -Q . BST
 Src/Impl.v
 Src/Spec.v
-Strategies/BSmallInitGenerator.v
-Strategies/BSmallTrainedGenerator.v
 Strategies/TypeBasedGenerator.v
-Runners/BSmallInitGenerator_test_runner.v
-Runners/BSmallTrainedGenerator_test_runner.v
+Strategies/BLSDThinGenerator.v
+Strategies/BLSDThinSEFreq2SPB200IsBSTLR30Epochs2000Bound10Generator.v
 Runners/TypeBasedGenerator_test_runner.v
+Runners/BLSDThinGenerator_test_runner.v
+Runners/BLSDThinSEFreq2SPB200IsBSTLR30Epochs2000Bound10Generator_test_runner.v

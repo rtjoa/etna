@@ -14,7 +14,7 @@ def parse_results(results: str) -> pd.DataFrame:
 
     l = []
     for e in entries:
-        print(e.path)
+        # print(e.path)
         l.append(pd.read_json(e.path, orient='records', typ='frame'))
     df = pd.concat(l)
 
